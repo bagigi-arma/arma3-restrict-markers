@@ -9,10 +9,10 @@ include = [
     "meta.cpp",
     "README.md",
     "LICENSE.md",
-    "Data/Picture.paa",
-    "Data/LogoBlack.paa",
-    "Data/LogoRed.paa",
-    "Data/LogoSmallRed.paa",
+    "data/Picture.paa",
+    "data/LogoBlack.paa",
+    "data/LogoRed.paa",
+    "data/LogoSmallRed.paa",
 ]
 
 [version]

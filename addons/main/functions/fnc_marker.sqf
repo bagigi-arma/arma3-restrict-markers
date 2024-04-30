@@ -25,12 +25,6 @@ jib_marker_shareDistance = 7;
 // Magic tag for identifying processed markers
 jib_marker_magicTag = "jib_marker_local";
 
-// Check if a marker is stamped
-jib_marker_isMarkerStamped = {
-	params ["_marker"];
-	_marker find jib_marker_magicTag > -1
-};
-
 // Check if a marker is player created (ie not via a script)
 jib_marker_isMarkerPlayerCreated = {
 	params ["_marker"];
@@ -133,7 +127,7 @@ jib_marker_markerCreated = {
 	if (![_marker] call jib_marker_isMarkerPlayerCreated) exitWith {};
 
 	// Break infinite loop
-	if ([_marker] call jib_marker_isMarkerStamped) exitWith {};
+	if ([_marker] call FUNC(isMarkerStamped)) exitWith {};
 
 	// Filter if marker can be shared
 	if (
@@ -172,7 +166,7 @@ jib_marker_markerDeleted = {
 	params ["_marker", "_local"];
 
 	// Only handle stamped markers
-	if (![_marker] call jib_marker_isMarkerStamped) exitWith {};
+	if (![_marker] call FUNC(isMarkerStamped)) exitWith {};
 
 	// Broadcast to all clients.
 	//

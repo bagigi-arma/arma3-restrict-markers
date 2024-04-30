@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 class CfgPatches {
     class jib_marker {
         name = "Restrict Markers";
@@ -11,16 +13,11 @@ class CfgPatches {
     };
 };
 
-class CfgFunctions {
-    class jib_marker {
-        class jib_marker {
-            file = "x\jib_marker\addons\main";
-            class marker { preInit = 1; recompile = 1; };
-        };
-    };
-};
-
 class CfgFactionClasses {
     class NO_CATEGORY;
     class jib_marker: NO_CATEGORY { displayName = "Restrict Markers"; };
 };
+
+class CBA_Extended_EventHandlers_base;
+#include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"

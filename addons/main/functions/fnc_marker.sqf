@@ -25,41 +25,6 @@ jib_marker_shareDistance = 7;
 // Magic tag for identifying processed markers
 jib_marker_magicTag = "jib_marker_local";
 
-// Handle the markerCreated event
-//
-// The event fires for all created markers, including script created
-// and player created. When processing a player created marker, we
-// create a local marker which triggers this event recursively, so we
-// must detect that case and avoid infinite recursion.
-jib_marker_markerCreated = {
-	params [
-		"_marker",
-		"_channelNumber",
-		"_owner",
-		"_local"
-	];
-
-	// If share enabled then revert to vanilla behavior
-	if (!jib_marker_enabled) exitWith {};
-
-	// Only process player created markers
-	if (![_marker] call FUNC(isMarkerPlayerCreated)) exitWith {};
-
-	// Break infinite loop
-	if ([_marker] call FUNC(isMarkerStamped)) exitWith {};
-
-	// Filter if marker can be shared
-	if (
-		[_owner] call FUNC(canShare)
-	) then {
-		// Process the marker
-		[_marker, _owner] spawn FUNC(processMarker);
-	} else {
-		// Discard the marker
-		[_marker] spawn FUNC(discardMarker);
-	};
-};
-
 // Handle stamped marker deletion event
 jib_marker_stampedMarkerDeleted = {
 	params [
@@ -106,7 +71,7 @@ jib_marker_registerEventHandlers = {
 	if (!hasInterface) exitWith {};
 	addMissionEventHandler [
 		"MarkerCreated",
-		jib_marker_markerCreated
+		FUNC(markerCreatedEvent)
 	];
 	addMissionEventHandler [
 		"MarkerDeleted",

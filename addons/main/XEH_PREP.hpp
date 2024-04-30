@@ -5,3 +5,4 @@ PREP(isMarkerPlayerCreated);
 PREP(canShare);
 PREP(processMarker);
 PREP(discardMarker);
+PREP(markerCreatedEvent);

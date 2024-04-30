@@ -1,21 +1,21 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class jib_marker {
-        name = "Restrict Markers";
-        author = "JibStyle";
-        requiredVersion = 1.60;
-        requiredAddons[] = {"A3_Modules_F"};
-        units[] = {
-            "jib_marker_moduleDisable",
-            "jib_marker_moduleEnable",
-        };
-    };
+	class jib_marker {
+		name = "Restrict Markers";
+		author = "JibStyle";
+		requiredVersion = 1.60;
+		requiredAddons[] = {"A3_Modules_F"};
+		units[] = {
+			"jib_marker_moduleDisable",
+			"jib_marker_moduleEnable",
+		};
+	};
 };
 
 class CfgFactionClasses {
-    class NO_CATEGORY;
-    class jib_marker: NO_CATEGORY { displayName = "Restrict Markers"; };
+	class NO_CATEGORY;
+	class jib_marker: NO_CATEGORY { displayName = "Restrict Markers"; };
 };
 
 class CBA_Extended_EventHandlers_base;

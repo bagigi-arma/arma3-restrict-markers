@@ -25,19 +25,6 @@ jib_marker_shareDistance = 7;
 // Magic tag for identifying processed markers
 jib_marker_magicTag = "jib_marker_local";
 
-// Register the event handlers for processing markers
-jib_marker_registerEventHandlers = {
-	if (!hasInterface) exitWith {};
-	addMissionEventHandler [
-		"MarkerCreated",
-		FUNC(markerCreatedEvent)
-	];
-	addMissionEventHandler [
-		"MarkerDeleted",
-		FUNC(markerDeletedEvent)
-	];
-};
-
 // Validate module logic then run inner code.
 //
 // Validation occurs on machine where logic is local. Ensures
@@ -142,6 +129,3 @@ publicVariable "jib_marker_stampedMarkerDeleted";
 publicVariable "jib_marker_markerDeleted";
 publicVariable "jib_marker_registerEventHandlers";
 publicVariable "jib_marker_moduleValidate";
-
-// Register on all clients
-[] remoteExec ["jib_marker_registerEventHandlers", 0, true];

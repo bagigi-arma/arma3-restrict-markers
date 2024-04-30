@@ -25,12 +25,6 @@ jib_marker_shareDistance = 7;
 // Magic tag for identifying processed markers
 jib_marker_magicTag = "jib_marker_local";
 
-// Check if a marker is player created (ie not via a script)
-jib_marker_isMarkerPlayerCreated = {
-	params ["_marker"];
-	_marker find "_USER_DEFINED" > -1
-};
-
 // Check if a marker event should be shared
 jib_marker_canShare = {
 	params ["_owner"]; // Unit (a player) that created the marker
@@ -124,7 +118,7 @@ jib_marker_markerCreated = {
 	if (!jib_marker_enabled) exitWith {};
 
 	// Only process player created markers
-	if (![_marker] call jib_marker_isMarkerPlayerCreated) exitWith {};
+	if (![_marker] call FUNC(isMarkerPlayerCreated)) exitWith {};
 
 	// Break infinite loop
 	if ([_marker] call FUNC(isMarkerStamped)) exitWith {};

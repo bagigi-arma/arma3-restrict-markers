@@ -25,37 +25,6 @@ jib_marker_shareDistance = 7;
 // Magic tag for identifying processed markers
 jib_marker_magicTag = "jib_marker_local";
 
-// Stamp a marker string with owner ID and magic tag.
-//
-// The owner ID is used to make each client's local marker unique,
-// and the magic tag is used to prevent inifinite recursion in the
-// event handlers. This function can be used to re-stamp a marker
-// with a different client ID.
-jib_marker_stampMarker = {
-	params ["_marker", "_ownerID"];
-
-	// Strip magic tag and owner ID (if any) to get base marker.
-	//
-	// Regex compiled every time. Hopefully won't impact performance
-	// noticeably. Will only occur when players interact with markers
-	// which shouldn't be too frequent.
-	private _baseMarker = _marker regexReplace [
-		format [
-			" %1 [0-9]+",
-			jib_marker_magicTag
-		],
-		""
-	];
-
-	// (Re)-Stamp marker with magic tag and specified owner ID
-	format [
-		"%1 %2 %3",
-		_baseMarker,
-		jib_marker_magicTag,
-		_ownerID
-	]
-};
-
 // Check if a marker is stamped
 jib_marker_isMarkerStamped = {
 	params ["_marker"];
@@ -118,7 +87,7 @@ jib_marker_processMarker = {
 		// infinite loop. Stamping with local client ID makes it
 		// unique so it doesn't get deleted when other players delete
 		// their version of the marker.
-		[_marker, clientOwner] call jib_marker_stampMarker,
+		[_marker, clientOwner] call FUNC(stampMarker),
 		_markerPos,
 		_markerChannel,
 		_owner
@@ -193,7 +162,7 @@ jib_marker_stampedMarkerDeleted = {
 			[
 				_marker,
 				clientOwner
-			] call jib_marker_stampMarker
+			] call FUNC(stampMarker)
 		);
 	};
 };

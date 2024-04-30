@@ -1,1 +1,2 @@
 PREP(marker);
+PREP(stampMarker);

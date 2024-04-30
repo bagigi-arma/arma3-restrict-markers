@@ -25,26 +25,6 @@ jib_marker_shareDistance = 7;
 // Magic tag for identifying processed markers
 jib_marker_magicTag = "jib_marker_local";
 
-// Handle stamped marker deletion event
-jib_marker_stampedMarkerDeleted = {
-	params [
-		"_owner", // Unit (a player) that deleted the marker
-		"_marker" // Stamped marker string
-	];
-
-	if (
-		[_owner] call FUNC(canShare)
-	) then {
-		deleteMarkerLocal (
-			// Re-stamp with own client ID before deleting
-			[
-				_marker,
-				clientOwner
-			] call FUNC(stampMarker)
-		);
-	};
-};
-
 // Handle the markerDeleted event
 jib_marker_markerDeleted = {
 	params ["_marker", "_local"];
@@ -60,7 +40,7 @@ jib_marker_markerDeleted = {
 	// the stamped marker spawns a method on all client via
 	// `remoteExec`.
 	[player, _marker] remoteExec [
-		"jib_marker_stampedMarkerDeleted",
+		QFUNC(stampedMarkerDeleted),
 		0,
 		true
 	];

@@ -25,12 +25,6 @@ jib_marker_shareDistance = 7;
 // Magic tag for identifying processed markers
 jib_marker_magicTag = "jib_marker_local";
 
-// Check if a marker event should be shared
-jib_marker_canShare = {
-	params ["_owner"]; // Unit (a player) that created the marker
-	(player distance _owner <= jib_marker_shareDistance && alive player) || !jib_marker_enabled
-};
-
 // Replace marker with a local instance
 //
 // The local marker name includes a tag so we can break an infinite
@@ -125,7 +119,7 @@ jib_marker_markerCreated = {
 
 	// Filter if marker can be shared
 	if (
-		[_owner] call jib_marker_canShare
+		[_owner] call FUNC(canShare)
 	) then {
 		// Process the marker
 		[_marker, _owner] spawn jib_marker_processMarker;
@@ -143,7 +137,7 @@ jib_marker_stampedMarkerDeleted = {
 	];
 
 	if (
-		[_owner] call jib_marker_canShare
+		[_owner] call FUNC(canShare)
 	) then {
 		deleteMarkerLocal (
 			// Re-stamp with own client ID before deleting

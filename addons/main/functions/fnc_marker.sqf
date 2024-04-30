@@ -25,14 +25,6 @@ jib_marker_shareDistance = 7;
 // Magic tag for identifying processed markers
 jib_marker_magicTag = "jib_marker_local";
 
-// Discard (delete locally) a marker
-//
-// NOTE: This function must be spawned to avoid a crash.
-jib_marker_discardMarker = {
-	params ["_marker"];
-	deleteMarkerLocal _marker;
-};
-
 // Handle the markerCreated event
 //
 // The event fires for all created markers, including script created
@@ -64,7 +56,7 @@ jib_marker_markerCreated = {
 		[_marker, _owner] spawn FUNC(processMarker);
 	} else {
 		// Discard the marker
-		[_marker] spawn jib_marker_discardMarker;
+		[_marker] spawn FUNC(discardMarker);
 	};
 };
 

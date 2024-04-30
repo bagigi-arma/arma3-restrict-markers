@@ -7,3 +7,4 @@ PREP(processMarker);
 PREP(discardMarker);
 PREP(stampedMarkerDeleted);
 PREP(markerCreatedEvent);
+PREP(markerDeletedEvent);

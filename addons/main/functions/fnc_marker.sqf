@@ -25,27 +25,6 @@ jib_marker_shareDistance = 7;
 // Magic tag for identifying processed markers
 jib_marker_magicTag = "jib_marker_local";
 
-// Handle the markerDeleted event
-jib_marker_markerDeleted = {
-	params ["_marker", "_local"];
-
-	// Only handle stamped markers
-	if (![_marker] call FUNC(isMarkerStamped)) exitWith {};
-
-	// Broadcast to all clients.
-	//
-	// When a player deletes a stamped marker, the "markerDeleted"
-	// event doesn't fire on other clients because stamped markers
-	// are local. As a workaround, the client of the player deleting
-	// the stamped marker spawns a method on all client via
-	// `remoteExec`.
-	[player, _marker] remoteExec [
-		QFUNC(stampedMarkerDeleted),
-		0,
-		true
-	];
-};
-
 // Register the event handlers for processing markers
 jib_marker_registerEventHandlers = {
 	if (!hasInterface) exitWith {};
@@ -55,7 +34,7 @@ jib_marker_registerEventHandlers = {
 	];
 	addMissionEventHandler [
 		"MarkerDeleted",
-		jib_marker_markerDeleted
+		FUNC(markerDeletedEvent)
 	];
 };
 

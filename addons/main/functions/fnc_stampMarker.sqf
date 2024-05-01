@@ -8,7 +8,7 @@
  * with a different client ID.
  */
 
-params ["_marker", "_ownerID"];
+params ["_marker", ["_ownerID", clientOwner]];
 
 // Strip magic tag and owner ID (if any) to get base marker.
 //

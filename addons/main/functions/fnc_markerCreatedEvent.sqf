@@ -11,8 +11,8 @@
 
 params ["_marker", "_channelNumber", "_owner", "_local"];
 
-// If restriction is disabled revert to vanilla behavior
-if (!GVAR(enabled)) exitWith {};
+// If restriction is disabled, or player is in briefing, revert to vanilla behavior
+if (!GVAR(enabled) || {getClientStateNumber < 10}) exitWith {};
 
 // Only process player created markers
 if !([_marker] call FUNC(isMarkerPlayerCreated)) exitWith {};
@@ -24,9 +24,9 @@ if ([_marker] call FUNC(isMarkerStamped)) exitWith {};
 if (
 	[_owner] call FUNC(canShare)
 ) then {
-	// Process the marker
-	[_marker, _owner] spawn FUNC(processMarker);
+	// Process the marker after 0.1s, to give the netcode time to sync all marker attributes before processing it to a local marker
+	[FUNC(processMarker), [_marker, _owner], 0.1] call CBA_fnc_waitAndExecute;
 } else {
 	// Discard the marker
-	[_marker] spawn FUNC(discardMarker);
+	[_marker] call FUNC(discardMarker);
 };

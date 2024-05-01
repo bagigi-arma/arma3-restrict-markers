@@ -11,8 +11,8 @@
 
 params ["_marker", "_channelNumber", "_owner", "_local"];
 
-// If share enabled then revert to vanilla behavior
-if (!jib_marker_enabled) exitWith {};
+// If restriction is disabled revert to vanilla behavior
+if (!GVAR(enabled)) exitWith {};
 
 // Only process player created markers
 if (![_marker] call FUNC(isMarkerPlayerCreated)) exitWith {};

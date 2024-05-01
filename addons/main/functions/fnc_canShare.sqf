@@ -8,4 +8,4 @@
 
 params ["_owner"];
 
-(player distance _owner <= jib_marker_shareDistance && alive player) || !jib_marker_enabled
+(player distance _owner <= GVAR(shareDistance) && alive player) || !GVAR(enabled)

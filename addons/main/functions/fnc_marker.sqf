@@ -1,23 +1,5 @@
 if (!isServer) exitWith {};
 
-// PUBLIC INTERFACE
-//
-// These variables can be set to control the behavior of this addon.
-//
-// NOTE: If modifying these variables, you must call `publicVariable`
-// to broadcast their new values to all clients.
-
-// Master switch to enable the mod.
-//
-// Can be toggled mid mission as needed (eg. around briefing).
-jib_marker_enabled = true;
-
-// Distance restricted markers should share.
-//
-// Think of this as how far away you would be able to see another
-// player's map in real life.
-jib_marker_shareDistance = 7;
-
 // PRIVATE IMPLEMENTATION
 //
 // Everything below here is considered private.
@@ -97,8 +79,7 @@ jib_marker_moduleDisable = {
 		_this,
 		{
 			params ["_posATL", "_attached", "_args"];
-			jib_marker_enabled = false;
-			publicVariable "jib_marker_enabled";
+			[QGVAR(toggleRestriction), [false]] call CBA_fnc_serverEvent;
 		}
 	] call jib_marker_moduleValidate;
 };
@@ -108,8 +89,7 @@ jib_marker_moduleEnable = {
 		_this,
 		{
 			params ["_posATL", "_attached", "_args"];
-			jib_marker_enabled = true;
-			publicVariable "jib_marker_enabled";
+			[QGVAR(toggleRestriction), [true]] call CBA_fnc_serverEvent;
 		}
 	] call jib_marker_moduleValidate;
 };

@@ -7,7 +7,7 @@
 params ["_marker", "_local"];
 
 // Only handle stamped markers
-if (![_marker] call FUNC(isMarkerStamped)) exitWith {};
+if !([_marker] call FUNC(isMarkerStamped)) exitWith {};
 
 // Broadcast to all clients.
 //

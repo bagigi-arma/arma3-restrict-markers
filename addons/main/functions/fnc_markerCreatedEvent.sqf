@@ -15,7 +15,7 @@ params ["_marker", "_channelNumber", "_owner", "_local"];
 if (!GVAR(enabled)) exitWith {};
 
 // Only process player created markers
-if (![_marker] call FUNC(isMarkerPlayerCreated)) exitWith {};
+if !([_marker] call FUNC(isMarkerPlayerCreated)) exitWith {};
 
 // Break infinite loop
 if ([_marker] call FUNC(isMarkerStamped)) exitWith {};

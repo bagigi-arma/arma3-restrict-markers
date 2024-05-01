@@ -15,7 +15,9 @@ class CfgPatches {
 
 class CfgFactionClasses {
 	class NO_CATEGORY;
-	class PREFIX: NO_CATEGORY { displayName = "Restrict Markers"; };
+	class PREFIX: NO_CATEGORY {
+		displayName = "Restrict Markers";
+	};
 };
 
 class CBA_Extended_EventHandlers_base;

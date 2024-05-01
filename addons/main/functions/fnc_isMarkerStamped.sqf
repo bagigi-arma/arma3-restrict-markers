@@ -5,4 +5,4 @@
 
 params ["_marker"];
 
-_marker find jib_marker_magicTag > -1
+_marker find MARKERTAG > -1

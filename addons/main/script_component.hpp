@@ -15,3 +15,6 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+// Magic tag for identifying processed markers
+#define MARKERTAG "jib_marker_local"

@@ -18,7 +18,7 @@ params ["_marker", "_ownerID"];
 private _baseMarker = _marker regexReplace [
 	format [
 		" %1 [0-9]+",
-		jib_marker_magicTag
+		MARKERTAG
 	],
 	""
 ];
@@ -27,6 +27,6 @@ private _baseMarker = _marker regexReplace [
 format [
 	"%1 %2 %3",
 	_baseMarker,
-	jib_marker_magicTag,
+	MARKERTAG,
 	_ownerID
 ]

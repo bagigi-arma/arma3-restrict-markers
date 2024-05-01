@@ -1,12 +1,5 @@
 if (!isServer) exitWith {};
 
-// PRIVATE IMPLEMENTATION
-//
-// Everything below here is considered private.
-
-// Magic tag for identifying processed markers
-jib_marker_magicTag = "jib_marker_local";
-
 // Publish variables and functions
 publicVariable "jib_marker_enabled";
 publicVariable "jib_marker_shareDistance";

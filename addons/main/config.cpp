@@ -7,8 +7,8 @@ class CfgPatches {
 		requiredVersion = 1.60;
 		requiredAddons[] = {"A3_Modules_F"};
 		units[] = {
-			"jib_marker_moduleDisable",
-			"jib_marker_moduleEnable",
+			QGVAR(moduleDisable),
+			QGVAR(moduleEnable),
 		};
 	};
 };

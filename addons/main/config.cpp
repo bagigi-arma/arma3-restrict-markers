@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-	class jib_marker {
+	class PREFIX {
 		name = "Restrict Markers";
 		author = "JibStyle";
 		requiredVersion = 1.60;
@@ -15,7 +15,7 @@ class CfgPatches {
 
 class CfgFactionClasses {
 	class NO_CATEGORY;
-	class jib_marker: NO_CATEGORY { displayName = "Restrict Markers"; };
+	class PREFIX: NO_CATEGORY { displayName = "Restrict Markers"; };
 };
 
 class CBA_Extended_EventHandlers_base;

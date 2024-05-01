@@ -5,4 +5,4 @@
 
 params ["_marker"];
 
-_marker find MARKERTAG > -1
+MARKERTAG in _marker

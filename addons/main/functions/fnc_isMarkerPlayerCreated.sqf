@@ -5,4 +5,4 @@
 
 params ["_marker"];
 
-_marker find "_USER_DEFINED" > -1
+"_USER_DEFINED" in _marker

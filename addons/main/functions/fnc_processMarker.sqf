@@ -44,7 +44,7 @@ private _localMarker = createMarkerLocal [
 	// infinite loop. Stamping with local client ID makes it
 	// unique so it doesn't get deleted when other players delete
 	// their version of the marker.
-	[_marker, clientOwner] call FUNC(stampMarker),
+	[_marker] call FUNC(stampMarker),
 	_markerPos,
 	_markerChannel,
 	_owner

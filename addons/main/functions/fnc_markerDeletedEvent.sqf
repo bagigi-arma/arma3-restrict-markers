@@ -4,7 +4,7 @@
  * https://community.bistudio.com/wiki/Arma_3:_Mission_Event_Handlers#MarkerDeleted
  */
 
-params ["_marker", "_local"];
+params ["_marker", "_local", "_deleter"];
 
 // Only handle stamped markers
 if !([_marker] call FUNC(isMarkerStamped)) exitWith {};

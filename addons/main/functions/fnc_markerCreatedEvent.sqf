@@ -25,8 +25,8 @@ if (
 	[_owner] call FUNC(canShare)
 ) then {
 	// Process the marker
-	[_marker, _owner] spawn FUNC(processMarker);
+	[_marker, _owner] call FUNC(processMarker);
 } else {
 	// Discard the marker
-	[_marker] spawn FUNC(discardMarker);
+	[_marker] call FUNC(discardMarker);
 };

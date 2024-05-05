@@ -9,6 +9,15 @@
 
 if (!hasInterface) exitWith {};
 
+// Remove local stamped version of a marker deleted by a nearby player
+[QGVAR(deleteStampedMarkerEvent), {
+	params ["_marker"];
+	// Re-stamp with own client ID before deleting
+	private _localMarker = [_marker] call FUNC(stampMarker);
+	deleteMarkerLocal _localMarker;
+	GVAR(localMarkers) deleteAt _localMarker;
+}] call CBA_fnc_addEventHandler;
+
 // Receive all local markers from a remote player and integrate them into ones own local markers
 [QGVAR(shareAllMarkersEvent), {
 	params ["_remoteMarkers"]; // Hashmap containing all markers as serialized data

@@ -9,11 +9,8 @@ params ["_marker", "_local", "_deleter"];
 // Only handle stamped markers
 if !([_marker] call FUNC(isMarkerStamped)) exitWith {};
 
-// Broadcast to all clients.
-//
-// When a player deletes a stamped marker, the "markerDeleted"
-// event doesn't fire on other clients because stamped markers
-// are local. As a workaround, the client of the player deleting
-// the stamped marker spawns a method on all client via
-// `remoteExec`.
-[player, _marker] remoteExec [QFUNC(stampedMarkerDeleted), 0, true];
+// Get nearby players within share distance (exclude local player)
+private _nearPlayers = ([[ace_player, GVAR(shareDistance)]] call ace_map_gestures_fnc_getProximityPlayers) - [player];
+
+// Run deletion event on nearby clients
+[QGVAR(deleteStampedMarkerEvent), [_marker], _nearPlayers] call CBA_fnc_targetEvent;

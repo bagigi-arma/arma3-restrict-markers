@@ -9,5 +9,7 @@ if (
 	[_owner] call FUNC(canShare)
 ) then {
 	// Re-stamp with own client ID before deleting
-	deleteMarkerLocal ([_marker] call FUNC(stampMarker));
+	private _localMarker = [_marker] call FUNC(stampMarker);
+	deleteMarkerLocal _localMarker;
+	GVAR(localMarkers) deleteAt _localMarker;
 };

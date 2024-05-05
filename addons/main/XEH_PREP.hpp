@@ -7,6 +7,8 @@ PREP(discardMarker);
 PREP(stampedMarkerDeleted);
 PREP(markerCreatedEvent);
 PREP(markerDeletedEvent);
+PREP(markerUpdatedEvent);
 PREP(moduleToggleRestriction);
 PREP(moduleEnableRestriction);
 PREP(moduleDisableRestriction);
+PREP(serializeMarker);

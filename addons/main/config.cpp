@@ -4,8 +4,8 @@ class CfgPatches {
 	class PREFIX {
 		name = "Restrict Markers";
 		author = "JibStyle";
-		requiredVersion = 1.60;
-		requiredAddons[] = {"A3_Modules_F"};
+		requiredVersion = 2.20;
+		requiredAddons[] = {"A3_Modules_F","ace_common"};
 		units[] = {
 			QGVAR(moduleDisable),
 			QGVAR(moduleEnable),

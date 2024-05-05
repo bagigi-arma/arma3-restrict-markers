@@ -18,3 +18,9 @@ addMissionEventHandler [
 	"MarkerDeleted",
 	FUNC(markerDeletedEvent)
 ];
+addMissionEventHandler [
+	"MarkerUpdated",
+	FUNC(markerUpdatedEvent)
+];
+
+GVAR(localMarkers) = createHashMap;

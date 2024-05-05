@@ -11,4 +11,5 @@ PREP(markerUpdatedEvent);
 PREP(moduleToggleRestriction);
 PREP(moduleEnableRestriction);
 PREP(moduleDisableRestriction);
+PREP(shareMarkers);
 PREP(serializeMarker);

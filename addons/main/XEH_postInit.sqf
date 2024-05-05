@@ -9,6 +9,18 @@
 
 if (!hasInterface) exitWith {};
 
+// Receive all local markers from a remote player and integrate them into ones own local markers
+[QGVAR(shareAllMarkersEvent), {
+	params ["_remoteMarkers"]; // Hashmap containing all markers as serialized data
+	{
+		private _key = _x;
+		private _value = _y;
+
+		// Unserialize the received marker
+		[_key, _value] call FUNC(serializeMarker);
+	} forEach _remoteMarkers;
+}] call CBA_fnc_addEventHandler;
+
 // Receive a single marker position update after a nearby player moved it
 [QGVAR(moveSingleMarkerEvent), {
 	params ["_marker", "_markerPos"];

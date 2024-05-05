@@ -10,3 +10,9 @@ params ["_marker", "_local"];
 if !([_marker] call FUNC(isMarkerStamped)) exitWith {};
 
 GVAR(localMarkers) set [_marker, [_marker] call FUNC(serializeMarker)];
+
+// Get nearby players within share distance (exclude local player)
+private _nearPlayers = ([[ace_player, GVAR(shareDistance)]] call ace_map_gestures_fnc_getProximityPlayers) - [player];
+
+// Send nearby players the updated marker's new position
+[QGVAR(moveSingleMarkerEvent), [_marker, (markerPos _marker)], _nearPlayers] call CBA_fnc_targetEvent;

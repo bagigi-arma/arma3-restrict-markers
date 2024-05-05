@@ -9,6 +9,14 @@
 
 if (!hasInterface) exitWith {};
 
+// Receive a single marker position update after a nearby player moved it
+[QGVAR(moveSingleMarkerEvent), {
+	params ["_marker", "_markerPos"];
+
+	_marker = [_marker] call FUNC(stampMarker);
+	_marker setMarkerPosLocal _markerPos;
+}] call CBA_fnc_addEventHandler;
+
 // Register the event handlers for processing markers
 addMissionEventHandler [
 	"MarkerCreated",

@@ -13,4 +13,6 @@ if !([_marker] call FUNC(isMarkerStamped)) exitWith {};
 private _nearPlayers = ([[ace_player, GVAR(shareDistance)]] call ace_map_gestures_fnc_getProximityPlayers) - [player];
 
 // Run deletion event on nearby clients
-[QGVAR(deleteStampedMarkerEvent), [_marker], _nearPlayers] call CBA_fnc_targetEvent;
+[QGVAR(deleteStampedMarkerEvent), [_marker, player], _nearPlayers] call CBA_fnc_targetEvent;
+
+["Deleted marker for:", _nearPlayers] call FUNC(notifyList);

@@ -15,4 +15,6 @@ GVAR(localMarkers) set [_marker, [_marker] call FUNC(serializeMarker)];
 private _nearPlayers = ([[ace_player, GVAR(shareDistance)]] call ace_map_gestures_fnc_getProximityPlayers) - [player];
 
 // Send nearby players the updated marker's new position
-[QGVAR(moveSingleMarkerEvent), [_marker, (markerPos _marker)], _nearPlayers] call CBA_fnc_targetEvent;
+[QGVAR(moveSingleMarkerEvent), [_marker, (markerPos _marker), player], _nearPlayers] call CBA_fnc_targetEvent;
+
+["Sent updated marker position to:", _nearPlayers] call FUNC(notifyList);

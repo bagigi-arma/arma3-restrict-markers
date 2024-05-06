@@ -12,3 +12,4 @@ PREP(moduleEnableRestriction);
 PREP(moduleDisableRestriction);
 PREP(shareMarkers);
 PREP(serializeMarker);
+PREP(notifyList);

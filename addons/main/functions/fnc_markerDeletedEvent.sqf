@@ -9,6 +9,9 @@ params ["_marker", "_local", "_deleter"];
 // Only handle stamped markers
 if !([_marker] call FUNC(isMarkerStamped)) exitWith {};
 
+// Remove marker from HashMap
+GVAR(localMarkers) deleteAt _marker;
+
 // Get nearby players within share distance (exclude local player)
 private _nearPlayers = ([[ace_player, GVAR(shareDistance)]] call ace_map_gestures_fnc_getProximityPlayers) - [player];
 

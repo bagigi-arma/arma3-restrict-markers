@@ -23,9 +23,9 @@ if (!hasInterface) exitWith {};
 [QGVAR(shareAllMarkersEvent), {
 	params ["_remoteMarkers", "_owner"]; // Hashmap containing all markers as serialized data
 	{
-		private _key = _x;
+		// Re-Stamp received marker
+		private _key = [_x] call FUNC(stampMarker);
 		private _value = _y;
-
 		// Unserialize the received marker
 		[_key, _value] call FUNC(serializeMarker);
 	} forEach _remoteMarkers;

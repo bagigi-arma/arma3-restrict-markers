@@ -24,8 +24,8 @@ if ([_marker] call FUNC(isMarkerStamped)) exitWith {};
 if (
 	[_owner] call FUNC(canShare)
 ) then {
-	// Process the marker
-	[_marker, _owner] call FUNC(processMarker);
+	// Process the marker after 0.1s, to give the netcode time to sync all marker attributes before processing it to a local marker
+	[FUNC(processMarker), [_marker, _owner], 0.1] call CBA_fnc_waitAndExecute;
 } else {
 	// Discard the marker
 	[_marker] call FUNC(discardMarker);

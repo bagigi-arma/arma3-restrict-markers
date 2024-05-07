@@ -15,11 +15,12 @@ if (_data isEqualTo []) then { // Serialize
 		markerPos _marker,
 		markerSize _marker,
 		markerText _marker,
-		markerType _marker
+		markerType _marker,
+		markerPolyline _marker
 	];
 	_data // Return serialized marker data, to be inserted into localMarkers HashMap
 } else { // Unserialize
-	_data params ["_channel", "_color", "_dir", "_pos", "_size", "_text", "_type"];
+	_data params ["_channel", "_color", "_dir", "_pos", "_size", "_text", "_type", "_polyLine"];
 
 	// If marker does not exist on the current machine, create it as a local instance
 	if !((GVAR(localMarkers) getOrDefault [_marker, ""]) isEqualType []) then {
@@ -44,6 +45,9 @@ if (_data isEqualTo []) then { // Serialize
 	_marker setMarkerSizeLocal _size;
 	_marker setMarkerTextLocal _text;
 	_marker setMarkerTypeLocal _type;
+	if !(_polyLine isEqualTo []) then {
+		_marker setMarkerPolylineLocal _polyLine;
+	};
 
 	// Add new marker to this machine's localMarkers HashMap
 	GVAR(localMarkers) set [_marker, [_marker] call FUNC(serializeMarker)];

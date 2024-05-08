@@ -32,17 +32,6 @@ if (!hasInterface) exitWith {};
 	[["Received all markers from"], [name _owner]] call CBA_fnc_notify;
 }] call CBA_fnc_addEventHandler;
 
-// Receive a single marker data update after a nearby player moved it
-[QGVAR(updateSingleMarkerEvent), {
-	params ["_marker", "_markerData", "_owner"];
-
-	_marker = [_marker] call FUNC(stampMarker);
-	// Delete and recreate the marker, to avoid an infinite loop of MarkerUpdated events
-	[_marker] call FUNC(discardMarker);
-	[_marker, _markerData] call FUNC(serializeMarker);
-	[["Received single marker update from"], [name _owner]] call CBA_fnc_notify;
-}] call CBA_fnc_addEventHandler;
-
 // Register the event handlers for processing markers
 addMissionEventHandler [
 	"MarkerCreated",

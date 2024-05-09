@@ -16,7 +16,7 @@ if (!hasInterface) exitWith {};
 	private _localMarker = [_marker] call FUNC(stampMarker);
 	deleteMarkerLocal _localMarker;
 	GVAR(localMarkers) deleteAt _localMarker;
-	[["Received deletion event from"], [name _owner]] call CBA_fnc_notify;
+	["Received deletion event from", [_owner]] call FUNC(notifyList);
 }] call CBA_fnc_addEventHandler;
 
 // Receive all local markers from a remote player and integrate them into ones own local markers
@@ -29,7 +29,7 @@ if (!hasInterface) exitWith {};
 		// Unserialize the received marker
 		[_key, _value] call FUNC(serializeMarker);
 	} forEach _remoteMarkers;
-	[["Received all markers from"], [name _owner]] call CBA_fnc_notify;
+	["Received all markers from", [_owner]] call FUNC(notifyList);
 }] call CBA_fnc_addEventHandler;
 
 // Sends all of your markers to a remote player

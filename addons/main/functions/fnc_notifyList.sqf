@@ -11,4 +11,7 @@ private _args = [[_message, 1.2]];
 	_args pushBack [name _x];
 } forEach _unitList;
 
+// Skip or overwrite this notification if another entered the queue
+_args pushBack true;
+
 _args call CBA_fnc_notify;

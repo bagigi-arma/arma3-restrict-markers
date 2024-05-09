@@ -13,4 +13,5 @@ PREP(notifyList);
 PREP(processMarker);
 PREP(serializeMarker);
 PREP(shareMarkers);
+PREP(singleShareChildrenActions);
 PREP(stampMarker);

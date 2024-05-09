@@ -25,8 +25,8 @@ class CfgVehicles {
 				class JIB_MarkersShareSinglePlayer {
 					displayName = "With single player";
 					condition = QUOTE(true);
-					statement = "";//QUOTE([] call FUNC(shareMarkers)); PLACEHOLDER
-					insertChildren = "";//QUOTE(call FUNC()); PLACEHOLDER
+					statement = "";
+					insertChildren = QUOTE(call FUNC(singleShareChildrenActions));
 					EXCEPTIONS;
 					showDisabled = 1;
 				};

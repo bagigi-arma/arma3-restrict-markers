@@ -6,6 +6,16 @@
  * 0: Owner <UNIT> 
  */
 
-params ["_owner"];
+params ["_owner", ["_recipient", player]];
 
-(player distance _owner <= GVAR(shareDistance) && alive player) || !GVAR(enabled)
+if (!GVAR(enabled)) exitWith {true};
+
+if (!alive _recipient || {lifeState _recipient == "INCAPACITATED"}) exitWith {false};
+
+if (vehicle _owner == vehicle _recipient) exitWith {true};
+
+private _distance = _recipient distance _owner;
+
+if (group _owner == group _recipient) exitWith {_distance <= GVAR(shareDistanceGroup)};
+
+_distance <= GVAR(shareDistance)

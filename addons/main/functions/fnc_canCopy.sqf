@@ -8,4 +8,8 @@
 
 params ["_owner"];
 
-(player distance _owner <= GVAR(shareDistance) && alive player) || !GVAR(enabled)
+if (!GVAR(enabled)) exitWith {false};
+
+if (!alive _owner || {lifeState _owner == "INCAPACITATED"}) exitWith {true};
+
+true

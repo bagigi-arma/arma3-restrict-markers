@@ -33,7 +33,7 @@ class CfgVehicles {
 				// Share markers with every player in your group within "group share distance"
 				class JIB_MarkersShareGroup {
 					displayName = "With players in your group";
-					condition = QUOTE(true);
+					condition = QUOTE(count units _player > 1);
 					statement = QUOTE([1] call FUNC(shareMarkers));
 					EXCEPTIONS;
 					showDisabled = 1;
@@ -41,7 +41,7 @@ class CfgVehicles {
 				// Share markers with everyone inside your vehicle
 				class JIB_MarkersShareVehicle {
 					displayName = "With players in your vehicle";
-					condition = QUOTE(true);
+					condition = QUOTE(vehicle _player != _player);
 					statement = QUOTE([2] call FUNC(shareMarkers));
 					EXCEPTIONS;
 					showDisabled = 1;
@@ -62,7 +62,7 @@ class CfgVehicles {
 					// Share markers with targeted player
 					class JIB_MarkersShare {
 						displayName = "With player";
-						condition = QUOTE(true);
+						condition = QUOTE([ARR_2(_player,_target)] call FUNC(canShare));
 						statement = QUOTE([ARR_2(4,_target)] call FUNC(shareMarkers));
 						EXCEPTIONS;
 						showDisabled = 1;
@@ -70,7 +70,7 @@ class CfgVehicles {
 					// Copy markers from targeted player
 					class JIB_MarkersClone {
 						displayName = "Copy from player";
-						condition = QUOTE(true);
+						condition = QUOTE([_target] call FUNC(canCopy));
 						statement = QUOTE([ARR_2(5,_target)] call FUNC(shareMarkers));
 						EXCEPTIONS;
 						showDisabled = 1;

@@ -1,3 +1,4 @@
+PREP(canCopy);
 PREP(canShare);
 PREP(discardMarker);
 PREP(isMarkerPlayerCreated);

@@ -32,6 +32,12 @@ if (!hasInterface) exitWith {};
 	[["Received all markers from"], [name _owner]] call CBA_fnc_notify;
 }] call CBA_fnc_addEventHandler;
 
+// Sends all of your markers to a remote player
+[QGVAR(copyAllMarkersEvent), {
+	params ["_target"];
+	[4, _target] call FUNC(shareMarkers);
+}] call CBA_fnc_addEventHandler;
+
 // Register the event handlers for processing markers
 addMissionEventHandler [
 	"MarkerCreated",

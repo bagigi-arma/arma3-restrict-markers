@@ -1,14 +1,81 @@
+#define EXCEPTIONS exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"}
+
 class CfgVehicles {
-	// ACE Self-Interaction on map to re-share markers
+	// ACE Interactions to re-share or copy markers
 	class Man;
 	class CAManBase: Man {
+		// Self-Interactions on Map
 		class ACE_SelfActions {
-			class JIB_ShareMarkers {
-				displayName = "Share markers with nearby players";
+			class JIB_Markers {
+				displayName = "Share Markers";
 				condition = QUOTE(visibleMap);
-				statement = QUOTE(call FUNC(shareMarkers));
-				exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
+				statement = "";
+				EXCEPTIONS;
 				showDisabled = 0;
+
+				// Share markers with all players within share distance
+				class JIB_MarkersShareLocal {
+					displayName = "With all nearby players";
+					condition = QUOTE(true);
+					statement = QUOTE([0] call FUNC(shareMarkers));
+					EXCEPTIONS;
+					showDisabled = 1;
+				};
+				// Share markers with a single player, selectable via child-interaction
+				class JIB_MarkersShareSinglePlayer {
+					displayName = "With single player";
+					condition = QUOTE(true);
+					statement = "";//QUOTE([] call FUNC(shareMarkers)); PLACEHOLDER
+					insertChildren = "";//QUOTE(call FUNC()); PLACEHOLDER
+					EXCEPTIONS;
+					showDisabled = 1;
+				};
+				// Share markers with every player in your group within "group share distance"
+				class JIB_MarkersShareGroup {
+					displayName = "With players in your group";
+					condition = QUOTE(true);
+					statement = QUOTE([1] call FUNC(shareMarkers));
+					EXCEPTIONS;
+					showDisabled = 1;
+				};
+				// Share markers with everyone inside your vehicle
+				class JIB_MarkersShareVehicle {
+					displayName = "With players in your vehicle";
+					condition = QUOTE(true);
+					statement = QUOTE([2] call FUNC(shareMarkers));
+					EXCEPTIONS;
+					showDisabled = 1;
+				};
+			};
+		};
+
+		// Interactions on player pelvis
+		class ACE_Actions {
+			class ACE_MainActions {
+				class JIB_Markers {
+					displayName = "Share Markers";
+					condition = QUOTE(true);
+					statement = "";
+					EXCEPTIONS;
+					showDisabled = 0;
+
+					// Share markers with targeted player
+					class JIB_MarkersShare {
+						displayName = "With player";
+						condition = QUOTE(true);
+						statement = QUOTE([ARR_2(4,_target)] call FUNC(shareMarkers));
+						EXCEPTIONS;
+						showDisabled = 1;
+					};
+					// Copy markers from targeted player
+					class JIB_MarkersClone {
+						displayName = "Copy from player";
+						condition = QUOTE(true);
+						statement = QUOTE([ARR_2(5,_target)] call FUNC(shareMarkers));
+						EXCEPTIONS;
+						showDisabled = 1;
+					};
+				};
 			};
 		};
 	};

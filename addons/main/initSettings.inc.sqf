@@ -13,13 +13,26 @@ private _category = "Restrict Markers";
 	1
 ] call CBA_fnc_addSetting;
 
-// Distance restricted markers should share.
+// Distance within markers can be shared.
 [
 	QGVAR(shareDistance),
 	"SLIDER",
 	[
 		"Marker Share Distance",
 		"Maximum distance in meters to which created/updated markers are shared."
+	],
+	_category,
+	[1, 30, 7, 0], // [_min, _max, _default, _trailingDecimals, _isPercentage]
+	1
+] call CBA_fnc_addSetting;
+
+// Distance within markers can be shared with your group.
+[
+	QGVAR(shareDistanceGroup),
+	"SLIDER",
+	[
+		"Marker Group Share Distance",
+		"Maximum distance in meters to which created/updated markers are shared with members of the same group."
 	],
 	_category,
 	[1, 30, 7, 0], // [_min, _max, _default, _trailingDecimals, _isPercentage]

@@ -10,10 +10,18 @@ params ["_owner"];
 
 if (!GVAR(enabled)) exitWith {false};
 
-if (!alive _owner || {lifeState _owner == "INCAPACITATED"}) exitWith {true};
+private _standardCheck = {
+	if (vehicle _owner == vehicle player) exitWith {true};
+	private _distance = player distance _owner;
+	if (group _owner == group player) exitWith {_distance <= GVAR(shareDistanceGroup)};
+	_distance <= GVAR(shareDistance)
+};
+
+// If owner is dead/unconscious/captive, shortcut to distance/same vehicle check
+if (!alive _owner || {lifeState _owner == "INCAPACITATED"} || {captive _owner}) exitWith {call _standardCheck};
 
 // Determine whether markers can be copied from a different side
-switch (GVAR(canCopyFromSide)) do {
+private _sideCopy = switch (GVAR(canCopyFromSide)) do {
 	case (0): { // Only same Side
 		(side group _owner) == (side group player)
 	};
@@ -25,4 +33,4 @@ switch (GVAR(canCopyFromSide)) do {
 	};
 };
 
-true
+_sideCopy && (call _standardCheck)

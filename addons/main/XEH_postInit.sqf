@@ -12,6 +12,8 @@ if (!hasInterface) exitWith {};
 // Remove local stamped version of a marker deleted by a nearby player
 [QGVAR(deleteStampedMarkerEvent), {
 	params ["_marker", "_owner"];
+	// Abort if Auto-Deletion is disabled on the receiving client
+	if (!GVAR(autoCopyDeletion)) exitWith {};
 	// Re-stamp with own client ID before deleting
 	private _localMarker = [_marker] call FUNC(stampMarker);
 	deleteMarkerLocal _localMarker;

@@ -38,3 +38,16 @@ private _category = "Restrict Markers";
 	[1, 30, 7, 0], // [_min, _max, _default, _trailingDecimals, _isPercentage]
 	1
 ] call CBA_fnc_addSetting;
+
+// Whether a nearby marker deletion is automatically propagated to oneself, client-setting
+[
+	QGVAR(autoCopyDeletion),
+	"CHECKBOX",
+	[
+		"Copy Nearby Marker Deletion",
+		"Choose whether you want a nearby marker deletion to also delete the marker on your map."
+	],
+	_category,
+	true,
+	2
+] call CBA_fnc_addSetting;

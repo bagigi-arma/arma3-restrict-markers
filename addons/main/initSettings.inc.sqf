@@ -39,6 +39,23 @@ private _category = "Restrict Markers";
 	1
 ] call CBA_fnc_addSetting;
 
+// Whether other players of different factions can copy your markers without your permission.
+[
+	QGVAR(canCopyFromSide),
+	"LIST",
+	[
+		"Who can copy your markers",
+		"Prevents copying of markers from conscious and non-captive players, for scenarios in which different factions might not be so open to map sharing."
+	],
+	_category,
+	[ // [_values, _valueTitles, _defaultIndex]
+		[0, 1, 2],
+		["Only same Side", "Friendly Side(s)", "Any Side"],
+		1
+	],
+	1
+] call CBA_fnc_addSetting;
+
 // Whether a nearby marker deletion is automatically propagated to oneself, client-setting
 [
 	QGVAR(autoCopyDeletion),

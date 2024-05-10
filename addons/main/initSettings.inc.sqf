@@ -4,10 +4,7 @@ private _category = "Restrict Markers";
 [
 	QGVAR(enabled),
 	"CHECKBOX",
-	[
-		"Mod Enabled",
-		"Determines whether the markers are restricted or function normally."
-	],
+	[LSTRING(ModuleSettings_Enabled_name), LSTRING(ModuleSettings_Enabled_description)],
 	_category,
 	true,
 	1
@@ -17,10 +14,7 @@ private _category = "Restrict Markers";
 [
 	QGVAR(shareDistance),
 	"SLIDER",
-	[
-		"Marker Share Distance",
-		"Maximum distance in meters to which created/updated markers are shared."
-	],
+	[LSTRING(ModuleSettings_ShareDistance_name), LSTRING(ModuleSettings_ShareDistance_description)],
 	_category,
 	[1, 30, 7, 0], // [_min, _max, _default, _trailingDecimals, _isPercentage]
 	1
@@ -30,10 +24,7 @@ private _category = "Restrict Markers";
 [
 	QGVAR(shareDistanceGroup),
 	"SLIDER",
-	[
-		"Marker Group Share Distance",
-		"Maximum distance in meters to which created/updated markers are shared with members of the same group."
-	],
+	[LSTRING(ModuleSettings_ShareDistanceGroup_name), LSTRING(ModuleSettings_ShareDistanceGroup_description)],
 	_category,
 	[1, 30, 7, 0], // [_min, _max, _default, _trailingDecimals, _isPercentage]
 	1
@@ -43,14 +34,11 @@ private _category = "Restrict Markers";
 [
 	QGVAR(canCopyFromSide),
 	"LIST",
-	[
-		"Who can copy your markers",
-		"Prevents copying of markers from conscious and non-captive players, for scenarios in which different factions might not be so open to map sharing."
-	],
+	[LSTRING(ModuleSettings_CanCopyFromSide_name), LSTRING(ModuleSettings_CanCopyFromSide_description)],
 	_category,
 	[ // [_values, _valueTitles, _defaultIndex]
 		[0, 1, 2],
-		["Only same Side", "Friendly Side(s)", "Any Side"],
+		[LSTRING(OnlySameSide), LSTRING(FriendlySide), LSTRING(AnySide)],
 		1
 	],
 	1
@@ -60,10 +48,7 @@ private _category = "Restrict Markers";
 [
 	QGVAR(autoCopyDeletion),
 	"CHECKBOX",
-	[
-		"Copy Nearby Marker Deletion",
-		"Choose whether you want a nearby marker deletion to also delete the marker on your map."
-	],
+	[LSTRING(ModuleSettings_AutoCopyDeletion_name), LSTRING(ModuleSettings_AutoCopyDeletion_description)],
 	_category,
 	true,
 	2

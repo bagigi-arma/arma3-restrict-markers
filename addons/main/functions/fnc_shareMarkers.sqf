@@ -8,7 +8,7 @@ params ["_mode", ["_target", ace_player]];
 // Send markers to a single selected player
 if (_mode == 4) exitWith {
 	[QGVAR(shareAllMarkersEvent), [GVAR(localMarkers), player], _target] call CBA_fnc_targetEvent;
-	["Shared all markers with:", [_target]] call FUNC(notifyList);
+	[LLSTRING(SharedAllMarkersWith), [_target]] call FUNC(notifyList);
 };
 // Copy markers from a single selected player
 if (_mode == 5) exitWith {
@@ -34,4 +34,4 @@ _nearPlayers = _nearPlayers - [player];
 
 [QGVAR(shareAllMarkersEvent), [GVAR(localMarkers), player], _nearPlayers] call CBA_fnc_targetEvent;
 
-["Shared all markers with:", _nearPlayers] call FUNC(notifyList);
+[LLSTRING(SharedAllMarkersWith), _nearPlayers] call FUNC(notifyList);

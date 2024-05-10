@@ -18,4 +18,4 @@ private _nearPlayers = ([[ace_player, GVAR(shareDistance)]] call ace_map_gesture
 // Run deletion event on nearby clients
 [QGVAR(deleteStampedMarkerEvent), [_marker, player], _nearPlayers] call CBA_fnc_targetEvent;
 
-["Deleted marker for:", _nearPlayers] call FUNC(notifyList);
+[LLSTRING(DeletedMarkerFor), _nearPlayers] call FUNC(notifyList);

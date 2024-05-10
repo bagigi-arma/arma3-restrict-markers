@@ -14,6 +14,7 @@ if (!hasInterface) exitWith {};
 	if (!GVAR(autoCopyDeletion)) exitWith {};
 	// Re-stamp with own client ID before deleting
 	private _localMarker = [_marker] call FUNC(stampMarker);
+	GVAR(deletionByEvent) = _localMarker;
 	deleteMarkerLocal _localMarker;
 	GVAR(localMarkers) deleteAt _localMarker;
 	[LLSTRING(ReceivedDeletionEvent), [_owner]] call FUNC(notifyList);
@@ -38,6 +39,16 @@ if (!hasInterface) exitWith {};
 	[4, _target] call FUNC(shareMarkers);
 }] call CBA_fnc_addEventHandler;
 
+// Receive a single marker data update after a nearby player moved it
+[QGVAR(updateSingleMarkerEvent), {
+	params ["_marker", "_markerPos", "_owner"];
+	_marker = [_marker] call FUNC(stampMarker);
+	GVAR(updateByEvent) = _marker;
+	_marker setMarkerPosLocal _markerPos;
+	GVAR(updateByEvent) = objNull;
+	[LLSTRING(UpdateSingleMarker), [_owner]] call FUNC(notifyList);
+}] call CBA_fnc_addEventHandler;
+
 // Register the event handlers for processing markers
 addMissionEventHandler [
 	"MarkerCreated",
@@ -53,3 +64,7 @@ addMissionEventHandler [
 ];
 
 GVAR(localMarkers) = createHashMap;
+
+// Status variables, to ignore certain marker update/delete events if they were triggered by a CBA Event
+GVAR(deletionByEvent) = objNull;
+GVAR(updateByEvent) = objNull;

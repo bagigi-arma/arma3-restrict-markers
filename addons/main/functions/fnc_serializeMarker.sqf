@@ -36,9 +36,11 @@ if (_data isEqualTo []) then { // Serialize
 		_marker = createMarkerLocal [[_marker] call FUNC(stampMarker), _pos, _channel, _owner];
 	} else {
 		// Marker already exists and was only moved by the remote user
+		GVAR(updateByEvent) = _marker;
 		_marker setMarkerPosLocal _pos;
 	};
 
+	GVAR(updateByEvent) = _marker;
 	// Update marker with unserialized data
 	_marker setMarkerColorLocal _color;
 	_marker setMarkerDirLocal _dir;
@@ -48,6 +50,7 @@ if (_data isEqualTo []) then { // Serialize
 	if !(_polyLine isEqualTo []) then {
 		_marker setMarkerPolylineLocal _polyLine;
 	};
+	GVAR(updateByEvent) = objNull;
 
 	// Add new marker to this machine's localMarkers HashMap
 	GVAR(localMarkers) set [_marker, [_marker] call FUNC(serializeMarker)];

@@ -12,6 +12,9 @@ if !([_marker] call FUNC(isMarkerStamped)) exitWith {};
 // Remove marker from HashMap
 GVAR(localMarkers) deleteAt _marker;
 
+// If deletion was triggered by a CBA event, do not propagate it again.
+if (GVAR(deletionByEvent) isEqualTo _marker) exitWith {GVAR(deletionByEvent) = objNull};
+
 // Get nearby players within share distance (exclude local player)
 private _nearPlayers = ([[ace_player, GVAR(shareDistance)]] call ace_map_gestures_fnc_getProximityPlayers) - [player];
 

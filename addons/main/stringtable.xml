@@ -131,5 +131,15 @@
 			<German>Alle marker geteilt mit:</German>
 			<Italian>Condiviso tutti i marker con:</Italian>
 		</Key>
+		<Key ID="STR_JIB_Marker_Main_UpdateSingleMarker">
+			<English>Received single marker update from</English>
+			<German>Einzelnes Markerupdate empfangen von</German>
+			<Italian>Ricevuto singolo aggiornamento marker da</Italian>
+		</Key>
+		<Key ID="STR_JIB_Marker_Main_SentMarkerUpdate">
+			<English>Sent updated marker position to:</English>
+			<German>Neue Position gesendet an:</German>
+			<Italian>Nuova posizione inviata a:</Italian>
+		</Key>
 	</Package>
 </Project>

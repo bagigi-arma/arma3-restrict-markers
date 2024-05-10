@@ -38,6 +38,7 @@ private _localMarker = createMarkerLocal [
 	_markerChannel,
 	_owner
 ];
+GVAR(updateByEvent) = _localMarker;
 _localMarker setMarkerColorLocal _markerColor;
 if (count _markerPolyline >= 4) then {
 	// [x1, y1, x2, y2, ..., xn, yn]
@@ -48,5 +49,6 @@ _localMarker setMarkerSizeLocal _markerSize;
 _localMarker setMarkerTextLocal _markerText;
 //_localMarker setMarkerTextLocal format ["LOCAL %1", _markerText];
 _localMarker setMarkerTypeLocal _markerType;
+GVAR(updateByEvent) = objNull;
 
 GVAR(localMarkers) set [_localMarker, [_localMarker] call FUNC(serializeMarker)];

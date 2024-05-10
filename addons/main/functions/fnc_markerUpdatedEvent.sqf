@@ -11,3 +11,14 @@ if !([_marker] call FUNC(isMarkerStamped)) exitWith {};
 
 private _markerData = [_marker] call FUNC(serializeMarker);
 GVAR(localMarkers) set [_marker, _markerData];
+
+// If update was triggered by a CBA event or Stamped Marker creation, do not propagate it again.
+if (GVAR(updateByEvent) isEqualTo _marker) exitWith {};
+
+// Get nearby players within share distance (exclude local player)
+private _nearPlayers = ([[ace_player, GVAR(shareDistance)]] call ace_map_gestures_fnc_getProximityPlayers) - [player];
+
+// Send nearby players the updated marker's new position
+[QGVAR(updateSingleMarkerEvent), [_marker, (markerPos _marker), player], _nearPlayers] call CBA_fnc_targetEvent;
+
+[LLSTRING(SentMarkerUpdate), _nearPlayers] call FUNC(notifyList);

@@ -86,6 +86,11 @@
 			<German>Verhindert abschreiben von den Karten lebendiger und nicht gefangener Spieler, für Szenarien in denen verschiedene Seiten nicht so offen gegenüber dem Kartenteilen sind.</German>
 			<Italian>Impedisce di copiare i marker dalle mappe di giocatori consci e non ammanettati, per missioni in cui certe fazioni non sono molto disposte a condividere la propria mappa.</Italian>
 		</Key>
+		<Key ID="STR_Restrict_Markers_Main_Nobody">
+			<English>Nobody</English>
+			<German>Niemand</German>
+			<Italian>Nessuno</Italian>
+		</Key>
 		<Key ID="STR_Restrict_Markers_Main_OnlySameSide">
 			<English>Only same Side</English>
 			<German>Nur die eigene Seite</German>

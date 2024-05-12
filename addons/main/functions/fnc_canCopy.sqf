@@ -22,13 +22,16 @@ if (!alive _owner || {lifeState _owner == "INCAPACITATED"} || {captive _owner}) 
 
 // Determine whether markers can be copied from a different side
 private _sideCopy = switch (GVAR(canCopyFromSide)) do {
-	case (0): { // Only same Side
+	case (0): { // Nobody
+		false
+	};
+	case (1): { // Only same Side
 		(side group _owner) == (side group player)
 	};
-	case (1): { // Friendly Side
+	case (2): { // Friendly Side
 		[side group _owner, side group player] call BIS_fnc_sideIsFriendly
 	};
-	case (2): { // Any Side
+	case (3): { // Any Side
 		true
 	};
 };

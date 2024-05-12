@@ -37,9 +37,9 @@ private _category = "Restrict Markers";
 	[LSTRING(ModuleSettings_CanCopyFromSide_name), LSTRING(ModuleSettings_CanCopyFromSide_description)],
 	_category,
 	[ // [_values, _valueTitles, _defaultIndex]
-		[0, 1, 2],
-		[LSTRING(OnlySameSide), LSTRING(FriendlySide), LSTRING(AnySide)],
-		1
+		[0, 1, 2, 3],
+		[LSTRING(Nobody), LSTRING(OnlySameSide), LSTRING(FriendlySide), LSTRING(AnySide)],
+		2
 	],
 	1
 ] call CBA_fnc_addSetting;

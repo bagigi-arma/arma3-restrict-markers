@@ -1,142 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="JIB_Marker">
+<Project name="Restrict_Markers">
 	<Package name="Main">
-		<Key ID="STR_JIB_Marker_Main_ShareMarkers">
+		<Key ID="STR_Restrict_Markers_Main_ShareMarkers">
 			<English>Share Markers</English>
 			<German>Marker Teilen</German>
 			<Italian>Condividi Marker</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ShareWithNearby">
+		<Key ID="STR_Restrict_Markers_Main_ShareWithNearby">
 			<English>With all nearby players</English>
 			<German>Mit nahen Spielern</German>
 			<Italian>Con giocatori vicini</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ShareWithSingle">
+		<Key ID="STR_Restrict_Markers_Main_ShareWithSingle">
 			<English>With single player</English>
 			<German>Mit einzelnem Spieler</German>
 			<Italian>Con singolo giocatore</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ShareWithGroup">
+		<Key ID="STR_Restrict_Markers_Main_ShareWithGroup">
 			<English>With your group</English>
 			<German>Mit deiner Gruppe</German>
 			<Italian>Con il tuo gruppo</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ShareWithVehicle">
+		<Key ID="STR_Restrict_Markers_Main_ShareWithVehicle">
 			<English>With players in your vehicle</English>
 			<German>Mit Spielern in deinem Fahrzeug</German>
 			<Italian>Con giocatori nel tuo veicolo</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ShareWithPlayer">
+		<Key ID="STR_Restrict_Markers_Main_ShareWithPlayer">
 			<English>With player</English>
 			<German>Mit Spieler</German>
 			<Italian>Con giocatore</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_CopyFromPlayer">
+		<Key ID="STR_Restrict_Markers_Main_CopyFromPlayer">
 			<English>Copy from player</English>
 			<German>Kopiere von Spieler</German>
 			<Italian>Copia da giocatore</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ModuleDisable_DisplayName">
+		<Key ID="STR_Restrict_Markers_Main_ModuleDisable_DisplayName">
 			<English>Disable Marker Restriction</English>
 			<German>Deaktiviere Marker Beschränkung</German>
 			<Italian>Disattiva restrizione marker</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ModuleEnable_DisplayName">
+		<Key ID="STR_Restrict_Markers_Main_ModuleEnable_DisplayName">
 			<English>Enable Marker Restriction</English>
 			<German>Aktiviere Marker Beschränkung</German>
 			<Italian>Attiva restrizione marker</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ModuleSettings_Enabled_name">
+		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_Enabled_name">
 			<English>Marker Restriction</English>
 			<German>Marker Beschränkung</German>
 			<Italian>Restrizione Marker</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ModuleSettings_Enabled_description">
+		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_Enabled_description">
 			<English>Determines whether the creation of markers is restricted to proximity or functions normally.</English>
 			<German>Bestimmt ob die erstellung von neuen Markern auf Nähe beschränkt wird oder normal funktioniert.</German>
 			<Italian>Determina se la creazione di nuovi marker viene ristretta a giocatori vicini oppure funziona normalmente.</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ModuleSettings_ShareDistance_name">
+		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShareDistance_name">
 			<English>Marker Share Distance</English>
 			<German>Teil-Reichweite für Marker</German>
 			<Italian>Distanza di condivisione</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ModuleSettings_ShareDistance_description">
+		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShareDistance_description">
 			<English>Maximum distance in meters to which created/updated markers are shared.</English>
 			<German>Maximale Reichweite innerhalb dessen Marker geteilt werden können.</German>
 			<Italian>Distanza massima entro cui puoi condividere marker con altri giocatori.</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ModuleSettings_ShareDistanceGroup_name">
+		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShareDistanceGroup_name">
 			<English>Marker Group Share Distance</English>
 			<German>Teil-Reichweite eigener Gruppe</German>
 			<Italian>Distanza di condivisione col Gruppo</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ModuleSettings_ShareDistanceGroup_description">
+		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShareDistanceGroup_description">
 			<English>Maximum distance in meters to which created/updated markers are shared with members of the same group.</English>
 			<German>Maximale Reichweite innerhalb dessen Marker mit der eigenen Gruppe geteilt werden können.</German>
 			<Italian>Distanza massima entro cui puoi condividere marker con membri del tuo gruppo.</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ModuleSettings_CanCopyFromSide_name">
+		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_CanCopyFromSide_name">
 			<English>Who can copy your markers</English>
 			<German>Wer Marker abschreiben kann</German>
 			<Italian>Chi può copiare marker</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ModuleSettings_CanCopyFromSide_description">
+		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_CanCopyFromSide_description">
 			<English>Prevents copying of markers from conscious and non-captive players, for scenarios in which different factions might not be so open to map sharing.</English>
 			<German>Verhindert abschreiben von den Karten lebendiger und nicht gefangener Spieler, für Szenarien in denen verschiedene Seiten nicht so offen gegenüber dem Kartenteilen sind.</German>
 			<Italian>Impedisce di copiare i marker dalle mappe di giocatori consci e non ammanettati, per missioni in cui certe fazioni non sono molto disposte a condividere la propria mappa.</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_OnlySameSide">
+		<Key ID="STR_Restrict_Markers_Main_OnlySameSide">
 			<English>Only same Side</English>
 			<German>Nur die eigene Seite</German>
 			<Italian>Solo la propria fazione</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_FriendlySide">
+		<Key ID="STR_Restrict_Markers_Main_FriendlySide">
 			<English>Friendly Side(s)</English>
 			<German>Verbündete Seiten</German>
 			<Italian>Fazioni alleate</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_AnySide">
+		<Key ID="STR_Restrict_Markers_Main_AnySide">
 			<English>Any Side</English>
 			<German>Jede Seite</German>
 			<Italian>Qualsiasi fazione</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ModuleSettings_AutoCopyDeletion_name">
+		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_AutoCopyDeletion_name">
 			<English>Copy Nearby Marker Deletion</English>
 			<German>Übernehme nahes löschen von Markern</German>
 			<Italian>Copia cancellamenti vicini di marker</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ModuleSettings_AutoCopyDeletion_description">
+		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_AutoCopyDeletion_description">
 			<English>Choose whether you want a nearby marker deletion to also delete the marker on your map.</English>
 			<German>Bestimmt ob das löschen eines Markers von einem nahegelegenem Spieler automatisch auf die eigene Karte übertragen wird.</German>
 			<Italian>Determina se il cancellamento di un marker da parte di un giocatore vicino viene ripetuto in automatico sulla tua mappa.</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ReceivedAllMarkers">
+		<Key ID="STR_Restrict_Markers_Main_ReceivedAllMarkers">
 			<English>Received all markers from</English>
 			<German>Alle marker empfangen von</German>
 			<Italian>Ricevuto tutti i marker di</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_ReceivedDeletionEvent">
+		<Key ID="STR_Restrict_Markers_Main_ReceivedDeletionEvent">
 			<English>Received deletion event from</English>
 			<German>Marker Löschung erhalten von</German>
 			<Italian>Ricevuto cancellamento da</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_DeletedMarkerFor">
+		<Key ID="STR_Restrict_Markers_Main_DeletedMarkerFor">
 			<English>Deleted marker for:</English>
 			<German>Marker gelöscht für:</German>
 			<Italian>Cancellato marker per:</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_SharedAllMarkersWith">
+		<Key ID="STR_Restrict_Markers_Main_SharedAllMarkersWith">
 			<English>Shared all markers with:</English>
 			<German>Alle marker geteilt mit:</German>
 			<Italian>Condiviso tutti i marker con:</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_UpdateSingleMarker">
+		<Key ID="STR_Restrict_Markers_Main_UpdateSingleMarker">
 			<English>Received single marker update from</English>
 			<German>Einzelnes Markerupdate empfangen von</German>
 			<Italian>Ricevuto singolo aggiornamento marker da</Italian>
 		</Key>
-		<Key ID="STR_JIB_Marker_Main_SentMarkerUpdate">
+		<Key ID="STR_Restrict_Markers_Main_SentMarkerUpdate">
 			<English>Sent updated marker position to:</English>
 			<German>Neue Position gesendet an:</German>
 			<Italian>Nuova posizione inviata a:</Italian>

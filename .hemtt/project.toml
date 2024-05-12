@@ -1,6 +1,6 @@
-name = "Restrict Markers"
-author = "JibStyle"
-prefix = "jib_marker"
+name = "Restrict Markers Bagigi"
+author = "JibStyle and Bagigi Team"
+prefix = "restrict_markers"
 mainprefix = "x"
 
 [files]

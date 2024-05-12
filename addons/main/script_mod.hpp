@@ -1,9 +1,9 @@
 // COMPONENT should be defined in the script_component.hpp and included BEFORE this hpp
 
 #define MAINPREFIX x
-#define PREFIX jib_marker
+#define PREFIX restrict_markers
 
-#include "\x\jib_marker\addons\main\script_version.hpp"
+#include "\x\restrict_markers\addons\main\script_version.hpp"
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD

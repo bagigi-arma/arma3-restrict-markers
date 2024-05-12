@@ -1,8 +1,8 @@
-name = "Restrict Markers";
-author = "JibStyle";
+name = "Restrict Markers Bagigi";
+author = "JibStyle and Bagigi Team";
 overview = "Map markers only share to nearby players.";
-tooltip = "Restrict Markers";
-tooltipOwned = "Restrict Markers - Owned";
+tooltip = "Restrict Markers BGG";
+tooltipOwned = "Restrict Markers BGG - Owned";
 picture = "data\Picture.paa";
 logo = "data\LogoRed.paa";
 logoOver = "data\LogoBlack.paa";

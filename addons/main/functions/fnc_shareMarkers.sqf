@@ -19,10 +19,10 @@ private _nearPlayers = [];
 
 switch (_mode) do {
 	case (0): { // All nearby players within share distance
-		_nearPlayers = ([[ace_player, GVAR(shareDistance)]] call ace_map_gestures_fnc_getProximityPlayers);
+		_nearPlayers = ([[ace_player, GVAR(shareDistance) max GVAR(shareDistanceGroup)]] call ace_map_gestures_fnc_getProximityPlayers) select {[player, _x] call FUNC(canShare)};
 	};
 	case (1): { // All players in the same group within group share distance
-		_nearPlayers = ([[ace_player, GVAR(shareDistanceGroup)]] call ace_map_gestures_fnc_getProximityPlayers) arrayIntersect (units player);
+		_nearPlayers = ([[ace_player, GVAR(shareDistanceGroup)]] call ace_map_gestures_fnc_getProximityPlayers) select {(group _x == group player) && ([player, _x] call FUNC(canShare))};
 	};
 	case (2): { // All players within the same vehicle (that are alive, conscious and not captives)
 		_nearPlayers = (crew vehicle player) select {alive _x && {!captive _x} && {lifeState _x != "INCAPACITATED"}};

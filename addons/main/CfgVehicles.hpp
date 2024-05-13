@@ -46,6 +46,22 @@ class CfgVehicles {
 					EXCEPTIONS;
 					showDisabled = 1;
 				};
+
+				// Interactions to toggle automatic sharing of created/updated/deleted markers, as well as prevent copying
+				class JIB_MarkersSharingOff {
+					displayName = CSTRING(StopSharing);
+					condition = QUOTE(GVAR(sharingEnabled));
+					statement = QUOTE([false] call FUNC(toggleSharing));
+					EXCEPTIONS;
+					showDisabled = 1;
+				};
+				class JIB_MarkersSharingOn {
+					displayName = CSTRING(StartSharing);
+					condition = QUOTE(!GVAR(sharingEnabled));
+					statement = QUOTE([true] call FUNC(toggleSharing));
+					EXCEPTIONS;
+					showDisabled = 1;
+				};
 			};
 		};
 

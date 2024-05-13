@@ -12,6 +12,9 @@ if !([_marker] call FUNC(isMarkerStamped)) exitWith {};
 // Remove marker from HashMap
 GVAR(localMarkers) deleteAt _marker;
 
+// Do not propagate event if sharing is currently disabled
+if (!GVAR(sharingEnabled)) exitWith {};
+
 // If deletion was triggered by a CBA event, do not propagate it again.
 if (GVAR(deletionByEvent) isEqualTo _marker) exitWith {GVAR(deletionByEvent) = objNull};
 

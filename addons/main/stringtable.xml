@@ -146,5 +146,25 @@
 			<German>Neue Position gesendet an:</German>
 			<Italian>Nuova posizione inviata a:</Italian>
 		</Key>
+		<Key ID="STR_Restrict_Markers_Main_StartSharing">
+			<English>Start Auto-Sharing</English>
+			<German>Auto-teilen AN</German>
+			<Italian>Abilita condivisione automatica</Italian>
+		</Key>
+		<Key ID="STR_Restrict_Markers_Main_StopSharing">
+			<English>Stop Auto-Sharing</English>
+			<German>Auto-teilen AUS</German>
+			<Italian>Disabilita condivisione automatica</Italian>
+		</Key>
+		<Key ID="STR_Restrict_Markers_Main_SharingOn">
+			<English>Automatic Marker Sharing Enabled</English>
+			<German>Marker Auto-Teilen Aktiviert</German>
+			<Italian>Condivisione automatica Abilitata</Italian>
+		</Key>
+		<Key ID="STR_Restrict_Markers_Main_SharingOff">
+			<English>Automatic Marker Sharing Disabled</English>
+			<German>Marker Auto-Teilen Deaktiviert</German>
+			<Italian>Condivisione automatica Disabilitata</Italian>
+		</Key>
 	</Package>
 </Project>

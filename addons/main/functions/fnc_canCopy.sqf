@@ -20,6 +20,9 @@ private _standardCheck = {
 // If owner is dead/unconscious/captive, shortcut to distance/same vehicle check
 if (!alive _owner || {lifeState _owner == "INCAPACITATED"} || {captive _owner}) exitWith {call _standardCheck};
 
+// If owner has his marker sharing disabled, prevent copying
+if !(_owner getVariable [QGVAR(sharingEnabled), true]) exitWith {false};
+
 // Determine whether markers can be copied from a different side
 private _sideCopy = switch (GVAR(canCopyFromSide)) do {
 	case (0): { // Nobody

@@ -15,3 +15,4 @@ PREP(serializeMarker);
 PREP(shareMarkers);
 PREP(singleShareChildrenActions);
 PREP(stampMarker);
+PREP(toggleSharing);

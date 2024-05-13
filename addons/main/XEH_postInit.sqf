@@ -68,3 +68,7 @@ GVAR(localMarkers) = createHashMap;
 // Status variables, to ignore certain marker update/delete events if they were triggered by a CBA Event
 GVAR(deletionByEvent) = objNull;
 GVAR(updateByEvent) = objNull;
+
+// Public boolean attached to the player, retrievable globally to toggle sharing
+GVAR(sharingEnabled) = true;
+player setVariable [QGVAR(sharingEnabled), true, true];

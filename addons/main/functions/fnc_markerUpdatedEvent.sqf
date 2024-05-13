@@ -12,6 +12,9 @@ if !([_marker] call FUNC(isMarkerStamped)) exitWith {};
 private _markerData = [_marker] call FUNC(serializeMarker);
 GVAR(localMarkers) set [_marker, _markerData];
 
+// Do not propagate event if sharing is currently disabled
+if (!GVAR(sharingEnabled)) exitWith {};
+
 // If update was triggered by a CBA event or Stamped Marker creation, do not propagate it again.
 if (GVAR(updateByEvent) isEqualTo _marker) exitWith {};
 

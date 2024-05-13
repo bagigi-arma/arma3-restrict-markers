@@ -116,6 +116,16 @@
 			<German>Bestimmt ob das löschen eines Markers von einem nahegelegenem Spieler automatisch auf die eigene Karte übertragen wird.</German>
 			<Italian>Determina se il cancellamento di un marker da parte di un giocatore vicino viene ripetuto in automatico sulla tua mappa.</Italian>
 		</Key>
+		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShowNotifications_name">
+			<English>Show Notifications</English>
+			<German>Zeige Benachrichtigungen</German>
+			<Italian>Mostra notifiche</Italian>
+		</Key>
+		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShowNotifications_description">
+			<English>Toggle the notifications that appear in the top right when sharing, moving, deleting and receiving markers.</English>
+			<German>Bestimmt ob oben-rechts Benachrichtigungen angezeigt werden wenn Marker geteilt, verschoben, gelöscht oder empfangen wurden.</German>
+			<Italian>Determina se vengono mostrate notifiche in alto a destra quando si creano, spostano, cancellano o ricevono marker.</Italian>
+		</Key>
 		<Key ID="STR_Restrict_Markers_Main_ReceivedAllMarkers">
 			<English>Received all markers from</English>
 			<German>Alle marker empfangen von</German>

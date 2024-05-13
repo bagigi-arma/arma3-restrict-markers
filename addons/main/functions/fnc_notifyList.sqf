@@ -5,6 +5,9 @@
 
 params ["_message", "_unitList"];
 
+// Do not print if notifications are disabled
+if (!GVAR(showNotifications)) exitWith {};
+
 // Do not print empty lists
 if (count _unitList < 1) exitWith {};
 

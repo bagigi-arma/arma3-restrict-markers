@@ -5,6 +5,9 @@
 
 params ["_message", "_unitList"];
 
+// Do not print empty lists
+if (count _unitList < 1) exitWith {};
+
 private _args = [[_message, 1.2]];
 
 {

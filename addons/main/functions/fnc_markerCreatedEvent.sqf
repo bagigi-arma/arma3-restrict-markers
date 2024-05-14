@@ -11,8 +11,8 @@
 
 params ["_marker", "_channelNumber", "_owner", "_local"];
 
-// If restriction is disabled, or player is in briefing, revert to vanilla behavior
-if (!GVAR(enabled) || {getClientStateNumber < 10}) exitWith {};
+// If restriction is disabled, revert to vanilla behavior
+if (!GVAR(enabled)) exitWith {};
 
 // Only process player created markers
 if !([_marker] call FUNC(isMarkerPlayerCreated)) exitWith {};

@@ -8,7 +8,7 @@
 
 params ["_owner", ["_recipient", player]];
 
-if (!GVAR(enabled)) exitWith {true};
+if (!GVAR(enabled) || {getClientStateNumber < 10}) exitWith {true};
 
 if (!alive _recipient || {lifeState _recipient == "INCAPACITATED"}) exitWith {false};
 

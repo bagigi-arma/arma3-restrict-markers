@@ -78,7 +78,7 @@ class CfgVehicles {
 					// Share markers with targeted player
 					class JIB_MarkersShare {
 						displayName = CSTRING(ShareWithPlayer);
-						condition = QUOTE([ARR_2(_player,_target)] call FUNC(canShare));
+						condition = QUOTE(alive _target && [ARR_2(_player,_target)] call FUNC(canShare));
 						statement = QUOTE([ARR_2(4,_target)] call FUNC(shareMarkers));
 						EXCEPTIONS;
 						showDisabled = 1;

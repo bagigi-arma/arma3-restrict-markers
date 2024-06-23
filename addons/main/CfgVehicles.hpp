@@ -1,3 +1,6 @@
+#define ICON_MAIN icon = QPATHTOF(data\interaction_icon.paa)
+#define ICON_SHARE icon = QPATHTOF(data\interaction_icon_share.paa)
+#define ICON_COPY icon = QPATHTOF(data\interaction_icon_copy.paa)
 #define EXCEPTIONS exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"}
 
 class CfgVehicles {
@@ -10,6 +13,7 @@ class CfgVehicles {
 				displayName = CSTRING(ShareMarkers);
 				condition = QUOTE(visibleMap);
 				statement = "";
+				ICON_MAIN;
 				EXCEPTIONS;
 				showDisabled = 0;
 
@@ -72,6 +76,7 @@ class CfgVehicles {
 					displayName = CSTRING(ShareMarkers);
 					condition = QUOTE(true);
 					statement = "";
+					ICON_MAIN;
 					EXCEPTIONS;
 					showDisabled = 0;
 
@@ -80,6 +85,7 @@ class CfgVehicles {
 						displayName = CSTRING(ShareWithPlayer);
 						condition = QUOTE(alive _target && [ARR_2(_player,_target)] call FUNC(canShare));
 						statement = QUOTE([ARR_2(4,_target)] call FUNC(shareMarkers));
+						ICON_SHARE;
 						EXCEPTIONS;
 						showDisabled = 1;
 					};
@@ -88,6 +94,7 @@ class CfgVehicles {
 						displayName = CSTRING(CopyFromPlayer);
 						condition = QUOTE([_target] call FUNC(canCopy));
 						statement = QUOTE([ARR_2(5,_target)] call FUNC(shareMarkers));
+						ICON_COPY;
 						EXCEPTIONS;
 						showDisabled = 1;
 					};

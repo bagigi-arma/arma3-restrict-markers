@@ -11,7 +11,7 @@ class CfgVehicles {
 		class ACE_SelfActions {
 			class JIB_Markers {
 				displayName = CSTRING(ShareMarkers);
-				condition = QUOTE(visibleMap);
+				condition = QUOTE(visibleMap && GVAR(enabled));
 				statement = "";
 				ICON_MAIN;
 				EXCEPTIONS;
@@ -74,7 +74,7 @@ class CfgVehicles {
 			class ACE_MainActions {
 				class JIB_Markers {
 					displayName = CSTRING(ShareMarkers);
-					condition = QUOTE(true);
+					condition = QUOTE(GVAR(enabled));
 					statement = "";
 					ICON_MAIN;
 					EXCEPTIONS;
@@ -101,24 +101,5 @@ class CfgVehicles {
 				};
 			};
 		};
-	};
-
-	// Zeus modules to enable/disable restriction globally
-	class Module_F;
-	class GVAR(module): Module_F {
-		isGlobal = 1;
-		curatorCanAttach = 1;
-		category = QUOTE(PREFIX);
-	};
-
-	class GVAR(moduleDisable): GVAR(module) {
-		scopeCurator = 2;
-		displayName = CSTRING(ModuleDisable_DisplayName);
-		function = QFUNC(moduleDisableRestriction);
-	};
-	class GVAR(moduleEnable): GVAR(module) {
-		scopeCurator = 2;
-		displayName = CSTRING(ModuleEnable_DisplayName);
-		function = QFUNC(moduleEnableRestriction);
 	};
 };

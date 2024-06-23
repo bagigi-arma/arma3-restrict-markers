@@ -1,10 +1,5 @@
 #include "script_component.hpp"
 
-[QGVAR(toggleRestriction), {
-	params ["_enabled"];
-	[QGVAR(enabled), _enabled, true, "mission"] call CBA_settings_fnc_set;
-}] call CBA_fnc_addEventHandler;
-
 if (!hasInterface) exitWith {};
 
 // Remove local stamped version of a marker deleted by a nearby player

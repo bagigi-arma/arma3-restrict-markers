@@ -36,16 +36,6 @@
 			<German>Kopiere von Spieler</German>
 			<Italian>Copia da giocatore</Italian>
 		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ModuleDisable_DisplayName">
-			<English>Disable Marker Restriction</English>
-			<German>Deaktiviere Marker Beschränkung</German>
-			<Italian>Disattiva restrizione marker</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ModuleEnable_DisplayName">
-			<English>Enable Marker Restriction</English>
-			<German>Aktiviere Marker Beschränkung</German>
-			<Italian>Attiva restrizione marker</Italian>
-		</Key>
 		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_Enabled_name">
 			<English>Marker Restriction</English>
 			<German>Marker Beschränkung</German>

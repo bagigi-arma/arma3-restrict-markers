@@ -1,6 +1,7 @@
 PREP(canCopy);
 PREP(canShare);
 PREP(discardMarker);
+PREP(isMarkerOwnedBy);
 PREP(isMarkerPlayerCreated);
 PREP(isMarkerStamped);
 PREP(markerCreatedEvent);

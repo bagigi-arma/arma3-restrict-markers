@@ -27,4 +27,9 @@ _nearPlayers = _nearPlayers select {[player, _x] call FUNC(canShare)};
 // Send nearby players the updated marker's new position
 [QGVAR(updateSingleMarkerEvent), [_marker, (markerPos _marker), player], _nearPlayers] call CBA_fnc_targetEvent;
 
+// Run update event on Dedicated Server when moving one's own marker
+if (!isDedicated && {[_marker] call FUNC(isMarkerOwnedBy)}) then {
+	[QGVAR(updateSingleMarkerEvent), [_marker, (markerPos _marker), player, true]] call CBA_fnc_serverEvent;
+};
+
 [LLSTRING(SentMarkerUpdate), _nearPlayers] call FUNC(notifyList);

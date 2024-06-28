@@ -23,7 +23,7 @@ if ([_marker] call FUNC(isMarkerStamped)) exitWith {};
 // Filter if marker can be shared
 if (
 	(_local || {_owner getVariable [QGVAR(sharingEnabled), true]}) && 
-	{[_owner] call FUNC(canShare)}
+	{isDedicated || ([_owner] call FUNC(canShare))}
 ) then {
 	// Process the marker after 0.1s, to give the netcode time to sync all marker attributes before processing it to a local marker
 	[FUNC(processMarker), [_marker, _owner], 0.1] call CBA_fnc_waitAndExecute;

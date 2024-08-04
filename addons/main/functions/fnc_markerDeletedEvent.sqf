@@ -15,6 +15,11 @@ GVAR(localMarkers) deleteAt _marker;
 // Do not propagate event if sharing is currently disabled
 if (!GVAR(sharingEnabled)) exitWith {};
 
+// Run deletion event on Dedicated Server when one's own marker was deleted
+if (!isDedicated && {[_marker] call FUNC(isMarkerOwnedBy)}) then {
+	[QGVAR(deleteStampedMarkerEvent), [_marker, player, true]] call CBA_fnc_serverEvent;
+};
+
 // If deletion was triggered by a CBA event, do not propagate it again.
 if (GVAR(deletionByEvent) isEqualTo _marker) exitWith {GVAR(deletionByEvent) = objNull};
 
@@ -24,10 +29,5 @@ _nearPlayers = _nearPlayers select {[player, _x] call FUNC(canShare)};
 
 // Run deletion event on nearby clients
 [QGVAR(deleteStampedMarkerEvent), [_marker, player], _nearPlayers] call CBA_fnc_targetEvent;
-
-// Run deletion event on Dedicated Server when deleting one's own marker
-if (!isDedicated && {[_marker] call FUNC(isMarkerOwnedBy)}) then {
-	[QGVAR(deleteStampedMarkerEvent), [_marker, player, true]] call CBA_fnc_serverEvent;
-};
 
 [LLSTRING(DeletedMarkerFor), _nearPlayers] call FUNC(notifyList);

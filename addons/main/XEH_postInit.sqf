@@ -36,6 +36,11 @@
 [QGVAR(copyAllMarkersEvent), {
 	params ["_target"];
 	[4, _target] call FUNC(shareMarkers);
+
+	// Only notify if conscious
+	if (lifeState player != "INCAPACITATED") then {
+		[LLSTRING(MarkersCopiedBy), [_target]] call FUNC(notifyList);
+	};
 }] call CBA_fnc_addEventHandler;
 
 // Receive a single marker data update after a nearby player moved it

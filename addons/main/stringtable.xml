@@ -166,5 +166,10 @@
 			<German>Marker Auto-Teilen Deaktiviert</German>
 			<Italian>Condivisione automatica Disabilitata</Italian>
 		</Key>
+		<Key ID="STR_Restrict_Markers_Main_MarkersCopiedBy">
+			<English>Your markers were copied by</English>
+			<German>Deine Marker wurden kopiert von</German>
+			<Italian>I tuoi marker sono stati copiati da</Italian>
+		</Key>
 	</Package>
 </Project>

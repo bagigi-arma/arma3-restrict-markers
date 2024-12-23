@@ -40,8 +40,7 @@ private _localMarker = createMarkerLocal [
 ];
 GVAR(updateByEvent) = _localMarker;
 _localMarker setMarkerColorLocal _markerColor;
-if (count _markerPolyline >= 4) then {
-	// [x1, y1, x2, y2, ..., xn, yn]
+if !(_markerPolyline isEqualTo []) then {
 	_localMarker setMarkerPolylineLocal _markerPolyline;
 };
 _localMarker setMarkerDirLocal _markerDir;

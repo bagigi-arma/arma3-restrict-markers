@@ -9,7 +9,7 @@ params ["_message", "_unitList"];
 if (!GVAR(showNotifications)) exitWith {};
 
 // Do not print empty lists
-if (count _unitList < 1) exitWith {};
+if (_unitList isEqualTo []) exitWith {};
 
 private _args = [[_message, 1.2]];
 

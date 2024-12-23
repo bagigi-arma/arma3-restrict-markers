@@ -11,7 +11,7 @@ params ["_owner"];
 if (!GVAR(enabled)) exitWith {false};
 
 private _standardCheck = {
-	if (objectParent _owner == objectParent player) exitWith {true};
+	if (vehicle _owner == vehicle player) exitWith {true};
 	private _distance = player distance _owner;
 	if (group _owner == group player) exitWith {_distance <= GVAR(shareDistanceGroup)};
 	_distance <= GVAR(shareDistance)

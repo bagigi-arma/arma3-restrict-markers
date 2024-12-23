@@ -7,7 +7,7 @@
 	if (!GVAR(autoCopyDeletion)) exitWith {};
 
 	// Abort on clients if the event is only meant to propagate to the Dedicated Server
-	if (_dedicatedOnly && {!isDedicated}) exitWith {};
+	if (_dedicatedOnly && !isDedicated) exitWith {};
 
 	// Re-stamp with own client ID before deleting
 	private _localMarker = [_marker] call FUNC(stampMarker);
@@ -51,7 +51,7 @@
 [QGVAR(updateSingleMarkerEvent), {
 	params ["_marker", "_markerPos", "_owner", ["_dedicatedOnly", false]];
 	// Abort on clients if the event is only meant to propagate to the Dedicated Server
-	if (_dedicatedOnly && {!isDedicated}) exitWith {};
+	if (_dedicatedOnly && !isDedicated) exitWith {};
 
 	_marker = [_marker] call FUNC(stampMarker);
 	GVAR(updateByEvent) = _marker;

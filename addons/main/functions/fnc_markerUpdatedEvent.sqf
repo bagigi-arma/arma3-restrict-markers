@@ -32,4 +32,6 @@ _nearPlayers = _nearPlayers select {[player, _x] call FUNC(canShare)};
 // Send nearby players the updated marker's new position
 [QGVAR(updateSingleMarkerEvent), [_marker, (markerPos _marker), player], _nearPlayers] call CBA_fnc_targetEvent;
 
-[LLSTRING(SentMarkerUpdate), _nearPlayers] call FUNC(notifyList);
+if (GVAR(showNotifications) == NOTIFY_ALL) then {
+	[LLSTRING(SentMarkerUpdate), _nearPlayers] call FUNC(notifyList);
+};

@@ -112,9 +112,24 @@
 			<Italian>Mostra notifiche</Italian>
 		</Key>
 		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShowNotifications_description">
-			<English>Toggle the notifications that appear in the top right when sharing, moving, deleting and receiving markers.</English>
-			<German>Bestimmt ob oben-rechts Benachrichtigungen angezeigt werden wenn Marker geteilt, verschoben, gelöscht oder empfangen wurden.</German>
-			<Italian>Determina se vengono mostrate notifiche in alto a destra quando si creano, spostano, cancellano o ricevono marker.</Italian>
+			<English>Choose which notifications appear in the top right when sharing, moving, deleting and receiving markers.</English>
+			<German>Bestimmt welche Benachrichtigungen oben-rechts angezeigt werden wenn Marker geteilt, verschoben, gelöscht oder empfangen wurden.</German>
+			<Italian>Determina quali notifiche vengono mostrate in alto a destra quando si creano, spostano, cancellano o ricevono marker.</Italian>
+		</Key>
+		<Key ID="STR_Restrict_Markers_Main_None">
+			<English>None</English>
+			<German>Keine</German>
+			<Italian>Nessuna</Italian>
+		</Key>
+		<Key ID="STR_Restrict_Markers_Main_OnlyMassSharing">
+			<English>Only mass sharing/receiving</English>
+			<German>Nur senden/empfangen aller Marker</German>
+			<Italian>Solo invio/ricezione di massa</Italian>
+		</Key>
+		<Key ID="STR_Restrict_Markers_Main_All">
+			<English>All</English>
+			<German>Alle</German>
+			<Italian>Tutte</Italian>
 		</Key>
 		<Key ID="STR_Restrict_Markers_Main_ReceivedAllMarkers">
 			<English>Received all markers from</English>

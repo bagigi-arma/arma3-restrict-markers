@@ -30,4 +30,6 @@ _nearPlayers = _nearPlayers select {[player, _x] call FUNC(canShare)};
 // Run deletion event on nearby clients
 [QGVAR(deleteStampedMarkerEvent), [_marker, player], _nearPlayers] call CBA_fnc_targetEvent;
 
-[LLSTRING(DeletedMarkerFor), _nearPlayers] call FUNC(notifyList);
+if (GVAR(showNotifications) == NOTIFY_ALL) then {
+	[LLSTRING(DeletedMarkerFor), _nearPlayers] call FUNC(notifyList);
+};

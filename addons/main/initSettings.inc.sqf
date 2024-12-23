@@ -57,9 +57,13 @@ private _category = "Restrict Markers";
 // Whether CBA Notifications are shown when sharing, moving, deleting or receiving Markers, client-setting
 [
 	QGVAR(showNotifications),
-	"CHECKBOX",
+	"LIST",
 	[LSTRING(ModuleSettings_ShowNotifications_name), LSTRING(ModuleSettings_ShowNotifications_description)],
 	_category,
-	true,
+	[ // [_values, _valueTitles, _defaultIndex]
+		[NOTIFY_NONE, NOTIFY_SHARE, NOTIFY_ALL],
+		[LSTRING(None), LSTRING(OnlyMassSharing), LSTRING(All)],
+		1
+	],
 	2
 ] call CBA_fnc_addSetting;

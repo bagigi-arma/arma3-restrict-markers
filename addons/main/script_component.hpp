@@ -18,3 +18,8 @@
 
 // Magic tag for identifying processed markers
 #define MARKERTAG "jib_marker_local"
+
+// Notification Level Flags
+#define NOTIFY_NONE 0
+#define NOTIFY_SHARE 1
+#define NOTIFY_ALL 2

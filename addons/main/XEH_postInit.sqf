@@ -15,7 +15,9 @@
 	deleteMarkerLocal _localMarker;
 	GVAR(localMarkers) deleteAt _localMarker;
 
-	[LLSTRING(ReceivedDeletionEvent), [_owner]] call FUNC(notifyList);
+	if (GVAR(showNotifications) == NOTIFY_ALL) then {
+		[LLSTRING(ReceivedDeletionEvent), [_owner]] call FUNC(notifyList);
+	};
 }] call CBA_fnc_addEventHandler;
 
 // Receive all local markers from a remote player and integrate them into ones own local markers
@@ -29,7 +31,9 @@
 		[_key, _value] call FUNC(serializeMarker);
 	} forEach _remoteMarkers;
 
-	[LLSTRING(ReceivedAllMarkers), [_owner]] call FUNC(notifyList);
+	if (GVAR(showNotifications) >= NOTIFY_SHARE) then {
+		[LLSTRING(ReceivedAllMarkers), [_owner]] call FUNC(notifyList);
+	};
 }] call CBA_fnc_addEventHandler;
 
 // Sends all of your markers to a remote player
@@ -38,7 +42,7 @@
 	[4, _target] call FUNC(shareMarkers);
 
 	// Only notify if conscious
-	if (lifeState player != "INCAPACITATED") then {
+	if ((GVAR(showNotifications) >= NOTIFY_SHARE) && {lifeState player != "INCAPACITATED"}) then {
 		[LLSTRING(MarkersCopiedBy), [_target]] call FUNC(notifyList);
 	};
 }] call CBA_fnc_addEventHandler;
@@ -54,7 +58,9 @@
 	_marker setMarkerPosLocal _markerPos;
 	GVAR(updateByEvent) = objNull;
 
-	[LLSTRING(UpdateSingleMarker), [_owner]] call FUNC(notifyList);
+	if (GVAR(showNotifications) == NOTIFY_ALL) then {
+		[LLSTRING(UpdateSingleMarker), [_owner]] call FUNC(notifyList);
+	};
 }] call CBA_fnc_addEventHandler;
 
 // Register the event handlers for processing markers

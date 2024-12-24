@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Restrict_Markers">
 	<Package name="Main">
+		<Key ID="STR_Restrict_Markers_Main_Diary_About_Title">
+			<English>About</English>
+			<German>About</German>
+			<Italian>About</Italian>
+		</Key>
+		<Key ID="STR_Restrict_Markers_Main_Diary_About_Text">
+			<English>The mod Restrict Markers has been enabled in this mission.&lt;br/&gt;&lt;br/&gt;As a result, your markers will not be automatically shared with everyone else.&lt;br/&gt;Instead, only those near you or in the same vehicle will receive your markers.&lt;br/&gt;&lt;br/&gt;To re-share your markers when joining up with other players, you can use one of several ACE Self-Interactions accessible through your map, or alternatively ACE Interactions on any player's waist.</English>
+			<German>Die Mod Restrict Markers wurde für diese Mission aktiviert.&lt;br/&gt;&lt;br/&gt;Dadurch werden deine Marker nicht mehr automatisch mit allen Spielern geteilt.&lt;br/&gt;Stattdessen werden nur Spieler in deiner Nähe oder in dem selben Fahrzeug deine Marker erhalten.&lt;br/&gt;&lt;br/&gt;Um deine Marker erneut zu teilen wenn du mit Anderen zusammenfindest kannst du eine von mehreren ACE Selbstinteraktionen auf deiner Karte verwenden, oder auch Interaktionen auf dem Becken eines beliebigen Spielers.</German>
+			<Italian>La mod Restrict Markers è stata abilitata in questa missione.&lt;br/&gt;&lt;br/&gt;Di conseguenza, i tuoi marker non verranno condivisi in automatico con tutti gli altri giocatori.&lt;br/&gt;Invece, solo quelli vicini a te o nello stesso veicolo li riceveranno.&lt;br/&gt;&lt;br/&gt;Per ricondividere i tuoi marker dopo esserti riunito con altri giocatori, puoi utilizzare una di varie auto-interazioni ACE dalla tua mappa, oppure interazioni ACE sul bacino di un qualsiasi giocatore.</Italian>
+		</Key>
 		<Key ID="STR_Restrict_Markers_Main_ShareMarkers">
 			<English>Share Markers</English>
 			<German>Marker Teilen</German>

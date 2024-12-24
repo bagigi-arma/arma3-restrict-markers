@@ -86,3 +86,9 @@ GVAR(updateByEvent) = objNull;
 // Public boolean attached to the player, retrievable globally to toggle sharing
 GVAR(sharingEnabled) = true;
 player setVariable [QGVAR(sharingEnabled), true, true];
+
+// Diary entry to explain Restrict Markers functionality and restrictions, if mod is enabled
+if (GVAR(enabled)) then {
+	player createDiarySubject [QUOTE(PREFIX), "Restrict Markers", QPATHTOF(data\interaction_icon.paa)];
+	player createDiaryRecord [QUOTE(PREFIX), [LLSTRING(Diary_About_Title), LLSTRING(Diary_About_Text)]];
+};

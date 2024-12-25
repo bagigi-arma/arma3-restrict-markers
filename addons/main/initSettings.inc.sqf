@@ -10,7 +10,7 @@ private _category = "Restrict Markers";
 	1
 ] call CBA_fnc_addSetting;
 
-// Distance within markers can be shared.
+// Distance within which markers can be shared.
 [
 	QGVAR(shareDistance),
 	"SLIDER",
@@ -20,7 +20,7 @@ private _category = "Restrict Markers";
 	1
 ] call CBA_fnc_addSetting;
 
-// Distance within markers can be shared with your group.
+// Distance within which markers can be shared with your group.
 [
 	QGVAR(shareDistanceGroup),
 	"SLIDER",
@@ -44,7 +44,7 @@ private _category = "Restrict Markers";
 	1
 ] call CBA_fnc_addSetting;
 
-// Whether a nearby marker deletion is automatically propagated to oneself, client-setting
+// Whether a nearby marker deletion is automatically propagated to oneself, client-setting.
 [
 	QGVAR(autoCopyDeletion),
 	"CHECKBOX",
@@ -54,7 +54,7 @@ private _category = "Restrict Markers";
 	2
 ] call CBA_fnc_addSetting;
 
-// Whether CBA Notifications are shown when sharing, moving, deleting or receiving Markers, client-setting
+// Whether CBA Notifications are shown when sharing, moving, deleting or receiving Markers, client-setting.
 [
 	QGVAR(showNotifications),
 	"LIST",

@@ -46,7 +46,6 @@ if !(_markerPolyline isEqualTo []) then {
 _localMarker setMarkerDirLocal _markerDir;
 _localMarker setMarkerSizeLocal _markerSize;
 _localMarker setMarkerTextLocal _markerText;
-//_localMarker setMarkerTextLocal format ["LOCAL %1", _markerText];
 _localMarker setMarkerTypeLocal _markerType;
 GVAR(updateByEvent) = objNull;
 

@@ -106,6 +106,16 @@
 			<German>Jede Seite</German>
 			<Italian>Qualsiasi fazione</Italian>
 		</Key>
+		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_DeleteOnRespawn_name">
+			<English>Delete Markers on Respawn</English>
+			<German>Lösche Marker nach Wiedereinstieg</German>
+			<Italian>Cancella marker dopo la riapparizione</Italian>
+		</Key>
+		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_DeleteOnRespawn_description">
+			<English>Choose whether you want a player's restricted markers to be deleted when he respawns.</English>
+			<German>Bestimmt ob die lokalen Marker eines Spielers beim Wiedereinstieg gelöscht werden.</German>
+			<Italian>Determina se la riapparizione di un giocatore comporta il cancellamento dei suoi marker locali.</Italian>
+		</Key>
 		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_AutoCopyDeletion_name">
 			<English>Copy Nearby Marker Deletion</English>
 			<German>Übernehme nahes löschen von Markern</German>

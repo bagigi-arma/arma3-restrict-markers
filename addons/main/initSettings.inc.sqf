@@ -44,6 +44,16 @@ private _category = "Restrict Markers";
 	1
 ] call CBA_fnc_addSetting;
 
+// Whether markers are deleted when a player respawns.
+[
+	QGVAR(deleteMarkersOnRespawn),
+	"CHECKBOX",
+	[LSTRING(ModuleSettings_DeleteOnRespawn_name), LSTRING(ModuleSettings_DeleteOnRespawn_description)],
+	_category,
+	false,
+	1
+] call CBA_fnc_addSetting;
+
 // Whether a nearby marker deletion is automatically propagated to oneself, client-setting.
 [
 	QGVAR(autoCopyDeletion),

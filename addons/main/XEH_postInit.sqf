@@ -78,6 +78,10 @@ addMissionEventHandler [
 	"MarkerUpdated",
 	FUNC(markerUpdatedEvent)
 ];
+player addMPEventHandler [
+	"MPRespawn",
+	FUNC(respawnEvent)
+];
 
 // GVAR and player object variables, to store ones own markers
 GVAR(localMarkers) = createHashMap;

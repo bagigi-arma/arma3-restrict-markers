@@ -9,6 +9,7 @@ PREP(markerDeletedEvent);
 PREP(markerUpdatedEvent);
 PREP(notifyList);
 PREP(processMarker);
+PREP(respawnEvent);
 PREP(serializeMarker);
 PREP(shareMarkers);
 PREP(singleShareChildrenActions);

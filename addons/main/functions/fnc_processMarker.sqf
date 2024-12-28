@@ -50,3 +50,4 @@ _localMarker setMarkerTypeLocal _markerType;
 GVAR(updateByEvent) = objNull;
 
 GVAR(localMarkers) set [_localMarker, [_localMarker] call FUNC(serializeMarker)];
+GVAR(syncMarkers) = true;

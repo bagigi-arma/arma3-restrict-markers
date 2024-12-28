@@ -13,6 +13,7 @@ if !([_marker] call FUNC(isMarkerStamped)) exitWith {};
 
 private _markerData = [_marker] call FUNC(serializeMarker);
 GVAR(localMarkers) set [_marker, _markerData];
+GVAR(syncMarkers) = true;
 
 // Do not propagate event if sharing is currently disabled
 if (!GVAR(sharingEnabled)) exitWith {};

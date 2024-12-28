@@ -14,7 +14,17 @@ if (_mode == 4) exitWith {
 };
 // Copy markers from a single selected player
 if (_mode == 5) exitWith {
-	[QGVAR(copyAllMarkersEvent), [player], _target] call CBA_fnc_targetEvent;
+	if (alive _target && {isPlayer _target}) then {
+		[QGVAR(copyAllMarkersEvent), [player], _target] call CBA_fnc_targetEvent;
+	} else {
+		{
+			[_x, _y] call FUNC(serializeMarker);
+		} forEach (_target getVariable [QGVAR(localMarkers), []]);
+
+		if (GVAR(showNotifications) >= NOTIFY_SHARE) then {
+			[LLSTRING(ReceivedAllMarkers), [_target]] call FUNC(notifyList);
+		};
+	};
 };
 
 private _nearPlayers = [];

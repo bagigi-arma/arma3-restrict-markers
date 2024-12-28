@@ -11,6 +11,7 @@ if !([_marker] call FUNC(isMarkerStamped)) exitWith {};
 
 // Remove marker from HashMap
 GVAR(localMarkers) deleteAt _marker;
+GVAR(syncMarkers) = true;
 
 // Do not propagate event if sharing is currently disabled
 if (!GVAR(sharingEnabled)) exitWith {};

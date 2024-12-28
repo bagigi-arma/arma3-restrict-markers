@@ -54,4 +54,5 @@ if (_data isEqualTo []) then { // Serialize
 
 	// Add new marker to this machine's localMarkers HashMap
 	GVAR(localMarkers) set [_marker, [_marker] call FUNC(serializeMarker)];
+	GVAR(syncMarkers) = true;
 };

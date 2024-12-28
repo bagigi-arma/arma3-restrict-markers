@@ -14,6 +14,7 @@
 	GVAR(deletionByEvent) = _localMarker;
 	deleteMarkerLocal _localMarker;
 	GVAR(localMarkers) deleteAt _localMarker;
+	GVAR(syncMarkers) = true;
 
 	if (GVAR(showNotifications) == NOTIFY_ALL) then {
 		[LLSTRING(ReceivedDeletionEvent), [_owner]] call FUNC(notifyList);
@@ -77,7 +78,29 @@ addMissionEventHandler [
 	FUNC(markerUpdatedEvent)
 ];
 
+// GVAR and player object variables, to store ones own markers
 GVAR(localMarkers) = createHashMap;
+private _unitMarkers = player getVariable [QGVAR(localMarkers), []];
+if !(_unitMarkers isEqualTo []) then {
+	// import own markers from the unit the player joined as
+	GVAR(localMarkers) = _unitMarkers;
+	{
+		[_x, _y] call FUNC(serializeMarker);
+	} forEach _unitMarkers;
+} else {
+	player setVariable [QGVAR(localMarkers), +GVAR(localMarkers), true];
+};
+
+// Create a PFH that will sync localMarkers to your player object, as a backup for rejoining as the same unit
+GVAR(syncMarkers) = false;
+[{
+	params ["_args", "_handle"];
+	// Abort early if there are no new markers to sync or the player is currently dead (awaiting a respawn or end of mission)
+	if (!GVAR(syncMarkers) || {!alive player}) exitWith {};
+
+	player setVariable [QGVAR(localMarkers), +GVAR(localMarkers), true];
+	GVAR(syncMarkers) = false;
+}, 10] call CBA_fnc_addPerFrameHandler;
 
 // Status variables, to ignore certain marker update/delete events if they were triggered by a CBA Event
 GVAR(deletionByEvent) = objNull;

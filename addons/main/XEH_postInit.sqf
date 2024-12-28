@@ -40,7 +40,8 @@
 // Sends all of your markers to a remote player
 [QGVAR(copyAllMarkersEvent), {
 	params ["_target"];
-	[4, _target] call FUNC(shareMarkers);
+	// Call share function with additional true argument, to suppress its notification
+	[4, _target, true] call FUNC(shareMarkers);
 
 	// Only notify if conscious
 	if ((GVAR(showNotifications) >= NOTIFY_SHARE) && {lifeState player != "INCAPACITATED"}) then {

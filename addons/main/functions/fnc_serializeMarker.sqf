@@ -27,7 +27,7 @@ if (_data isEqualTo []) then { // Serialize
 		// When modifying any of a marker's attributes on the map, Arma creates a new one. Delete any old marker near the new one's position that is most likely the same old one.
 		private _nearestMarker = [allMapMarkers, _pos] call BIS_fnc_nearestPosition;
 		if (
-			!(_nearestMarker isEqualTo [0,0,0]) && 
+			(_nearestMarker isNotEqualTo [0,0,0]) && 
 			{(markerPos _nearestMarker) distanceSqr _pos < 4}
 		) then {
 			[_nearestMarker] call FUNC(discardMarker);
@@ -47,7 +47,7 @@ if (_data isEqualTo []) then { // Serialize
 	_marker setMarkerSizeLocal _size;
 	_marker setMarkerTextLocal _text;
 	_marker setMarkerTypeLocal _type;
-	if !(_polyLine isEqualTo []) then {
+	if (_polyLine isNotEqualTo []) then {
 		_marker setMarkerPolylineLocal _polyLine;
 	};
 	GVAR(updateByEvent) = objNull;

@@ -86,7 +86,7 @@ player addMPEventHandler [
 // GVAR and player object variables, to store ones own markers
 GVAR(localMarkers) = createHashMap;
 private _unitMarkers = player getVariable [QGVAR(localMarkers), []];
-if !(_unitMarkers isEqualTo []) then {
+if (_unitMarkers isNotEqualTo []) then {
 	// import own markers from the unit the player joined as
 	GVAR(localMarkers) = _unitMarkers;
 	{

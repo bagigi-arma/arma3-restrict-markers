@@ -1,210 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Restrict_Markers">
-	<Package name="Main">
-		<Key ID="STR_Restrict_Markers_Main_Diary_About_Title">
-			<English>About</English>
-			<German>About</German>
-			<Italian>About</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_Diary_About_Text">
-			<English>The mod Restrict Markers has been enabled in this mission.&lt;br/&gt;&lt;br/&gt;As a result, your markers will not be automatically shared with everyone else.&lt;br/&gt;Instead, only those near you or in the same vehicle will receive your markers.&lt;br/&gt;&lt;br/&gt;To re-share your markers when joining up with other players, you can use one of several ACE Self-Interactions accessible through your map, or alternatively ACE Interactions on any player's waist.</English>
-			<German>Die Mod Restrict Markers wurde für diese Mission aktiviert.&lt;br/&gt;&lt;br/&gt;Dadurch werden deine Marker nicht mehr automatisch mit allen Spielern geteilt.&lt;br/&gt;Stattdessen werden nur Spieler in deiner Nähe oder in dem selben Fahrzeug deine Marker erhalten.&lt;br/&gt;&lt;br/&gt;Um deine Marker erneut zu teilen wenn du mit Anderen zusammenfindest kannst du eine von mehreren ACE Selbstinteraktionen auf deiner Karte verwenden, oder auch Interaktionen auf dem Becken eines beliebigen Spielers.</German>
-			<Italian>La mod Restrict Markers è stata abilitata in questa missione.&lt;br/&gt;&lt;br/&gt;Di conseguenza, i tuoi marker non verranno condivisi in automatico con tutti gli altri giocatori.&lt;br/&gt;Invece, solo quelli vicini a te o nello stesso veicolo li riceveranno.&lt;br/&gt;&lt;br/&gt;Per ricondividere i tuoi marker dopo esserti riunito con altri giocatori, puoi utilizzare una di varie auto-interazioni ACE dalla tua mappa, oppure interazioni ACE sul bacino di un qualsiasi giocatore.</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ShareMarkers">
-			<English>Share Markers</English>
-			<German>Marker Teilen</German>
-			<Italian>Condividi Marker</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ShareWithNearby">
-			<English>With all nearby players</English>
-			<German>Mit nahen Spielern</German>
-			<Italian>Con giocatori vicini</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ShareWithSingle">
-			<English>With single player</English>
-			<German>Mit einzelnem Spieler</German>
-			<Italian>Con singolo giocatore</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ShareWithGroup">
-			<English>With your group</English>
-			<German>Mit deiner Gruppe</German>
-			<Italian>Con il tuo gruppo</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ShareWithVehicle">
-			<English>With players in your vehicle</English>
-			<German>Mit Spielern in deinem Fahrzeug</German>
-			<Italian>Con giocatori nel tuo veicolo</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ShareWithPlayer">
-			<English>With player</English>
-			<German>Mit Spieler</German>
-			<Italian>Con giocatore</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_CopyFromPlayer">
-			<English>Copy from player</English>
-			<German>Kopiere von Spieler</German>
-			<Italian>Copia da giocatore</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_Enabled_name">
-			<English>Marker Restriction</English>
-			<German>Marker Beschränkung</German>
-			<Italian>Restrizione Marker</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_Enabled_description">
-			<English>Determines whether the creation of markers is restricted to proximity or functions normally.</English>
-			<German>Bestimmt ob die erstellung von neuen Markern auf Nähe beschränkt wird oder normal funktioniert.</German>
-			<Italian>Determina se la creazione di nuovi marker viene ristretta a giocatori vicini oppure funziona normalmente.</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShareDistance_name">
-			<English>Marker Share Distance</English>
-			<German>Teil-Reichweite für Marker</German>
-			<Italian>Distanza di condivisione</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShareDistance_description">
-			<English>Maximum distance in meters to which created/updated markers are shared.</English>
-			<German>Maximale Reichweite innerhalb dessen Marker geteilt werden können.</German>
-			<Italian>Distanza massima entro cui puoi condividere marker con altri giocatori.</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShareDistanceGroup_name">
-			<English>Marker Group Share Distance</English>
-			<German>Teil-Reichweite eigener Gruppe</German>
-			<Italian>Distanza di condivisione col Gruppo</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShareDistanceGroup_description">
-			<English>Maximum distance in meters to which created/updated markers are shared with members of the same group.</English>
-			<German>Maximale Reichweite innerhalb dessen Marker mit der eigenen Gruppe geteilt werden können.</German>
-			<Italian>Distanza massima entro cui puoi condividere marker con membri del tuo gruppo.</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_CanCopyFromSide_name">
-			<English>Who can copy your markers</English>
-			<German>Wer Marker abschreiben kann</German>
-			<Italian>Chi può copiare marker</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_CanCopyFromSide_description">
-			<English>Prevents copying of markers from conscious and non-captive players, for scenarios in which different factions might not be so open to map sharing.</English>
-			<German>Verhindert abschreiben von den Karten lebendiger und nicht gefangener Spieler, für Szenarien in denen verschiedene Seiten nicht so offen gegenüber dem Kartenteilen sind.</German>
-			<Italian>Impedisce di copiare i marker dalle mappe di giocatori consci e non ammanettati, per missioni in cui certe fazioni non sono molto disposte a condividere la propria mappa.</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_Nobody">
-			<English>Nobody</English>
-			<German>Niemand</German>
-			<Italian>Nessuno</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_OnlySameSide">
-			<English>Only same Side</English>
-			<German>Nur die eigene Seite</German>
-			<Italian>Solo la propria fazione</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_FriendlySide">
-			<English>Friendly Side(s)</English>
-			<German>Verbündete Seiten</German>
-			<Italian>Fazioni alleate</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_AnySide">
-			<English>Any Side</English>
-			<German>Jede Seite</German>
-			<Italian>Qualsiasi fazione</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_DeleteOnRespawn_name">
-			<English>Delete Markers on Respawn</English>
-			<German>Lösche Marker nach Wiedereinstieg</German>
-			<Italian>Cancella marker dopo la riapparizione</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_DeleteOnRespawn_description">
-			<English>Choose whether you want a player's restricted markers to be deleted when he respawns.</English>
-			<German>Bestimmt ob die lokalen Marker eines Spielers beim Wiedereinstieg gelöscht werden.</German>
-			<Italian>Determina se la riapparizione di un giocatore comporta il cancellamento dei suoi marker locali.</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_AutoCopyDeletion_name">
-			<English>Copy Nearby Marker Deletion</English>
-			<German>Übernehme nahes löschen von Markern</German>
-			<Italian>Copia cancellamenti vicini di marker</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_AutoCopyDeletion_description">
-			<English>Choose whether you want a nearby marker deletion to also delete the marker on your map.</English>
-			<German>Bestimmt ob das löschen eines Markers von einem nahegelegenem Spieler automatisch auf die eigene Karte übertragen wird.</German>
-			<Italian>Determina se il cancellamento di un marker da parte di un giocatore vicino viene ripetuto in automatico sulla tua mappa.</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShowNotifications_name">
-			<English>Show Notifications</English>
-			<German>Zeige Benachrichtigungen</German>
-			<Italian>Mostra notifiche</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShowNotifications_description">
-			<English>Choose which notifications appear in the top right when sharing, moving, deleting and receiving markers.</English>
-			<German>Bestimmt welche Benachrichtigungen oben-rechts angezeigt werden wenn Marker geteilt, verschoben, gelöscht oder empfangen wurden.</German>
-			<Italian>Determina quali notifiche vengono mostrate in alto a destra quando si creano, spostano, cancellano o ricevono marker.</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_None">
-			<English>None</English>
-			<German>Keine</German>
-			<Italian>Nessuna</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_OnlyMassSharing">
-			<English>Only mass sharing/receiving</English>
-			<German>Nur senden/empfangen aller Marker</German>
-			<Italian>Solo invio/ricezione di massa</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_All">
-			<English>All</English>
-			<German>Alle</German>
-			<Italian>Tutte</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ReceivedAllMarkers">
-			<English>Received all markers from</English>
-			<German>Alle marker empfangen von</German>
-			<Italian>Ricevuto tutti i marker di</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_ReceivedDeletionEvent">
-			<English>Received deletion event from</English>
-			<German>Marker Löschung erhalten von</German>
-			<Italian>Ricevuto cancellamento da</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_DeletedMarkerFor">
-			<English>Deleted marker for:</English>
-			<German>Marker gelöscht für:</German>
-			<Italian>Cancellato marker per:</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_SharedAllMarkersWith">
-			<English>Shared all markers with:</English>
-			<German>Alle marker geteilt mit:</German>
-			<Italian>Condiviso tutti i marker con:</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_UpdateSingleMarker">
-			<English>Received single marker update from</English>
-			<German>Einzelnes Markerupdate empfangen von</German>
-			<Italian>Ricevuto singolo aggiornamento marker da</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_SentMarkerUpdate">
-			<English>Sent updated marker position to:</English>
-			<German>Neue Position gesendet an:</German>
-			<Italian>Nuova posizione inviata a:</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_StartSharing">
-			<English>Start Auto-Sharing</English>
-			<German>Auto-teilen AN</German>
-			<Italian>Abilita condivisione automatica</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_StopSharing">
-			<English>Stop Auto-Sharing</English>
-			<German>Auto-teilen AUS</German>
-			<Italian>Disabilita condivisione automatica</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_SharingOn">
-			<English>Automatic Marker Sharing Enabled</English>
-			<German>Marker Auto-Teilen Aktiviert</German>
-			<Italian>Condivisione automatica Abilitata</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_SharingOff">
-			<English>Automatic Marker Sharing Disabled</English>
-			<German>Marker Auto-Teilen Deaktiviert</German>
-			<Italian>Condivisione automatica Disabilitata</Italian>
-		</Key>
-		<Key ID="STR_Restrict_Markers_Main_MarkersCopiedBy">
-			<English>Your markers were copied by</English>
-			<German>Deine Marker wurden kopiert von</German>
-			<Italian>I tuoi marker sono stati copiati da</Italian>
-		</Key>
-	</Package>
+    <Package name="Main">
+        <Key ID="STR_Restrict_Markers_Main_All">
+            <English>All</English>
+            <Italian>Tutte</Italian>
+            <German>Alle</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_AnySide">
+            <English>Any Side</English>
+            <Italian>Qualsiasi fazione</Italian>
+            <German>Jede Seite</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_CopyFromPlayer">
+            <English>Copy from player</English>
+            <Italian>Copia da giocatore</Italian>
+            <German>Kopiere von Spieler</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_DeletedMarkerFor">
+            <English>Deleted marker for:</English>
+            <Italian>Cancellato marker per:</Italian>
+            <German>Marker gelöscht für:</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_Diary_About_Text">
+            <English>The mod Restrict Markers has been enabled in this mission.&lt;br/&gt;&lt;br/&gt;As a result, your markers will not be automatically shared with everyone else.&lt;br/&gt;Instead, only those near you or in the same vehicle will receive your markers.&lt;br/&gt;&lt;br/&gt;To re-share your markers when joining up with other players, you can use one of several ACE Self-Interactions accessible through your map, or alternatively ACE Interactions on any player's waist.</English>
+            <Italian>La mod Restrict Markers è stata abilitata in questa missione.&lt;br/&gt;&lt;br/&gt;Di conseguenza, i tuoi marker non verranno condivisi in automatico con tutti gli altri giocatori.&lt;br/&gt;Invece, solo quelli vicini a te o nello stesso veicolo li riceveranno.&lt;br/&gt;&lt;br/&gt;Per ricondividere i tuoi marker dopo esserti riunito con altri giocatori, puoi utilizzare una di varie auto-interazioni ACE dalla tua mappa, oppure interazioni ACE sul bacino di un qualsiasi giocatore.</Italian>
+            <German>Die Mod Restrict Markers wurde für diese Mission aktiviert.&lt;br/&gt;&lt;br/&gt;Dadurch werden deine Marker nicht mehr automatisch mit allen Spielern geteilt.&lt;br/&gt;Stattdessen werden nur Spieler in deiner Nähe oder in dem selben Fahrzeug deine Marker erhalten.&lt;br/&gt;&lt;br/&gt;Um deine Marker erneut zu teilen wenn du mit Anderen zusammenfindest kannst du eine von mehreren ACE Selbstinteraktionen auf deiner Karte verwenden, oder auch Interaktionen auf dem Becken eines beliebigen Spielers.</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_Diary_About_Title">
+            <English>About</English>
+            <Italian>About</Italian>
+            <German>About</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_FriendlySide">
+            <English>Friendly Side(s)</English>
+            <Italian>Fazioni alleate</Italian>
+            <German>Verbündete Seiten</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_MarkersCopiedBy">
+            <English>Your markers were copied by</English>
+            <Italian>I tuoi marker sono stati copiati da</Italian>
+            <German>Deine Marker wurden kopiert von</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ModuleSettings_AutoCopyDeletion_description">
+            <English>Choose whether you want a nearby marker deletion to also delete the marker on your map.</English>
+            <Italian>Determina se il cancellamento di un marker da parte di un giocatore vicino viene ripetuto in automatico sulla tua mappa.</Italian>
+            <German>Bestimmt ob das löschen eines Markers von einem nahegelegenem Spieler automatisch auf die eigene Karte übertragen wird.</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ModuleSettings_AutoCopyDeletion_name">
+            <English>Copy Nearby Marker Deletion</English>
+            <Italian>Copia cancellamenti vicini di marker</Italian>
+            <German>Übernehme nahes löschen von Markern</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ModuleSettings_CanCopyFromSide_description">
+            <English>Prevents copying of markers from conscious and non-captive players, for scenarios in which different factions might not be so open to map sharing.</English>
+            <Italian>Impedisce di copiare i marker dalle mappe di giocatori consci e non ammanettati, per missioni in cui certe fazioni non sono molto disposte a condividere la propria mappa.</Italian>
+            <German>Verhindert abschreiben von den Karten lebendiger und nicht gefangener Spieler, für Szenarien in denen verschiedene Seiten nicht so offen gegenüber dem Kartenteilen sind.</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ModuleSettings_CanCopyFromSide_name">
+            <English>Who can copy your markers</English>
+            <Italian>Chi può copiare marker</Italian>
+            <German>Wer Marker abschreiben kann</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ModuleSettings_DeleteOnRespawn_description">
+            <English>Choose whether you want a player's restricted markers to be deleted when he respawns.</English>
+            <Italian>Determina se la riapparizione di un giocatore comporta il cancellamento dei suoi marker locali.</Italian>
+            <German>Bestimmt ob die lokalen Marker eines Spielers beim Wiedereinstieg gelöscht werden.</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ModuleSettings_DeleteOnRespawn_name">
+            <English>Delete Markers on Respawn</English>
+            <Italian>Cancella marker dopo la riapparizione</Italian>
+            <German>Lösche Marker nach Wiedereinstieg</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ModuleSettings_Enabled_description">
+            <English>Determines whether the creation of markers is restricted to proximity or functions normally.</English>
+            <Italian>Determina se la creazione di nuovi marker viene ristretta a giocatori vicini oppure funziona normalmente.</Italian>
+            <German>Bestimmt ob die erstellung von neuen Markern auf Nähe beschränkt wird oder normal funktioniert.</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ModuleSettings_Enabled_name">
+            <English>Marker Restriction</English>
+            <Italian>Restrizione Marker</Italian>
+            <German>Marker Beschränkung</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShareDistanceGroup_description">
+            <English>Maximum distance in meters to which created/updated markers are shared with members of the same group.</English>
+            <Italian>Distanza massima entro cui puoi condividere marker con membri del tuo gruppo.</Italian>
+            <German>Maximale Reichweite innerhalb dessen Marker mit der eigenen Gruppe geteilt werden können.</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShareDistanceGroup_name">
+            <English>Marker Group Share Distance</English>
+            <Italian>Distanza di condivisione col Gruppo</Italian>
+            <German>Teil-Reichweite eigener Gruppe</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShareDistance_description">
+            <English>Maximum distance in meters to which created/updated markers are shared.</English>
+            <Italian>Distanza massima entro cui puoi condividere marker con altri giocatori.</Italian>
+            <German>Maximale Reichweite innerhalb dessen Marker geteilt werden können.</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShareDistance_name">
+            <English>Marker Share Distance</English>
+            <Italian>Distanza di condivisione</Italian>
+            <German>Teil-Reichweite für Marker</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShowNotifications_description">
+            <English>Choose which notifications appear in the top right when sharing, moving, deleting and receiving markers.</English>
+            <Italian>Determina quali notifiche vengono mostrate in alto a destra quando si creano, spostano, cancellano o ricevono marker.</Italian>
+            <German>Bestimmt welche Benachrichtigungen oben-rechts angezeigt werden wenn Marker geteilt, verschoben, gelöscht oder empfangen wurden.</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ModuleSettings_ShowNotifications_name">
+            <English>Show Notifications</English>
+            <Italian>Mostra notifiche</Italian>
+            <German>Zeige Benachrichtigungen</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_Nobody">
+            <English>Nobody</English>
+            <Italian>Nessuno</Italian>
+            <German>Niemand</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_None">
+            <English>None</English>
+            <Italian>Nessuna</Italian>
+            <German>Keine</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_OnlyMassSharing">
+            <English>Only mass sharing/receiving</English>
+            <Italian>Solo invio/ricezione di massa</Italian>
+            <German>Nur senden/empfangen aller Marker</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_OnlySameSide">
+            <English>Only same Side</English>
+            <Italian>Solo la propria fazione</Italian>
+            <German>Nur die eigene Seite</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ReceivedAllMarkers">
+            <English>Received all markers from</English>
+            <Italian>Ricevuto tutti i marker di</Italian>
+            <German>Alle marker empfangen von</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ReceivedDeletionEvent">
+            <English>Received deletion event from</English>
+            <Italian>Ricevuto cancellamento da</Italian>
+            <German>Marker Löschung erhalten von</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_SentMarkerUpdate">
+            <English>Sent updated marker position to:</English>
+            <Italian>Nuova posizione inviata a:</Italian>
+            <German>Neue Position gesendet an:</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ShareMarkers">
+            <English>Share Markers</English>
+            <Italian>Condividi Marker</Italian>
+            <German>Marker Teilen</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ShareWithGroup">
+            <English>With your group</English>
+            <Italian>Con il tuo gruppo</Italian>
+            <German>Mit deiner Gruppe</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ShareWithNearby">
+            <English>With all nearby players</English>
+            <Italian>Con giocatori vicini</Italian>
+            <German>Mit nahen Spielern</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ShareWithPlayer">
+            <English>With player</English>
+            <Italian>Con giocatore</Italian>
+            <German>Mit Spieler</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ShareWithSingle">
+            <English>With single player</English>
+            <Italian>Con singolo giocatore</Italian>
+            <German>Mit einzelnem Spieler</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_ShareWithVehicle">
+            <English>With players in your vehicle</English>
+            <Italian>Con giocatori nel tuo veicolo</Italian>
+            <German>Mit Spielern in deinem Fahrzeug</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_SharedAllMarkersWith">
+            <English>Shared all markers with:</English>
+            <Italian>Condiviso tutti i marker con:</Italian>
+            <German>Alle marker geteilt mit:</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_SharingOff">
+            <English>Automatic Marker Sharing Disabled</English>
+            <Italian>Condivisione automatica Disabilitata</Italian>
+            <German>Marker Auto-Teilen Deaktiviert</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_SharingOn">
+            <English>Automatic Marker Sharing Enabled</English>
+            <Italian>Condivisione automatica Abilitata</Italian>
+            <German>Marker Auto-Teilen Aktiviert</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_StartSharing">
+            <English>Start Auto-Sharing</English>
+            <Italian>Abilita condivisione automatica</Italian>
+            <German>Auto-teilen AN</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_StopSharing">
+            <English>Stop Auto-Sharing</English>
+            <Italian>Disabilita condivisione automatica</Italian>
+            <German>Auto-teilen AUS</German>
+        </Key>
+        <Key ID="STR_Restrict_Markers_Main_UpdateSingleMarker">
+            <English>Received single marker update from</English>
+            <Italian>Ricevuto singolo aggiornamento marker da</Italian>
+            <German>Einzelnes Markerupdate empfangen von</German>
+        </Key>
+    </Package>
 </Project>

@@ -6,6 +6,6 @@
 params ["_marker"];
 
 deleteMarkerLocal _marker;
-GVAR(localMarkers) deleteAt _localMarker;
+GVAR(localMarkers) deleteAt _marker;
 
 GVAR(syncMarkers) = true;
